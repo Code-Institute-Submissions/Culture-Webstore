@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang:wght@300;600&family=Roboto+Mono&family=Work+Sans:wght@300;400;500&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    min-height: 100vh;
+    background-color: white;
+    color: black;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Fahkwang', sans-serif;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+/*--------------------------------------------------------------------- Colours */
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+
+/*--------------------------------------------------------------------- Nav */
+
+.navbar {
+    background-color: white !important;
+}
+
+.dropdown-menu-full {
+    width: 100% !important;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
+}
+
+.navbar-nav>li {
+    flex-grow: 1;
+}
+
+.navbar-nav .nav-link {
+    font-size: .9em;
+}
+
+/* Remove focus from hamburger */
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.navbar-toggler,
+.navbar-toggler {
+    border: none;
+}
+
+#search-modal {
+    font-family: 'Work Sans', sans-serif;
+}
+
+#search-modal .display-3 {
+    font-size: 5em;
+    font-weight: 900;
+    -webkit-text-stroke: 1.5px black;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.form-control:focus {
+    border-color: black;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 8px rgba(0, 0, 0, 0);
+    background-color: black;
+    color: black;
+    /* font-size: 1.2em; */
+
+}
+
+.form-control:enabled {
+    background-color: transparent;
+    font-size: 1.2em;
+}
+
+.modal-backdrop.show {
+    background-color: white !important;
+    opacity: .9 !important;
+}
+
+.form-control {
+    border-bottom: 2px solid black;
+}
+
+/* Scroll animation https://codepen.io/Murtaxa/pen/egrRbN */
+.scroll-left {
+    height: 75px;
+    padding-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll-left p {
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    /* Apply animation to this element */
+    -moz-animation: scroll-left 20s linear infinite;
+    -webkit-animation: scroll-left 20s linear infinite;
+    animation: scroll-left 20s linear infinite;
+}
+
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(-10%);
+    }
+
+    100% {
+        -moz-transform: translateX(-50%);
+    }
+}
+
+@-webkit-keyframes scroll-left {
+    0% {
+        -webkit-transform: translateX(-10%);
+    }
+
+    100% {
+        -webkit-transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(-10%);
+        /* Browser bug fix */
+        -webkit-transform: translateX(-10%);
+        /* Browser bug fix */
+        transform: translateX(-10%);
+    }
+
+    100% {
+        -moz-transform: translateX(-50%);
+        /* Browser bug fix */
+        -webkit-transform: translateX(-50%);
+        /* Browser bug fix */
+        transform: translateX(-50%);
+    }
+}
+
+#all-products a {
+    font-size: 1.5em;
+    color: white;
+}
+
+/*--------------------------------------------------------------------- Special paddings/margins/text */
+
+.letter-space {
+    letter-spacing: 1.5px;
+}
+
+/*--------------------------------------------------------------------- Image / Adjustments */
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    border-left: 65px solid white;
+    border-right: 65px solid white;
+    background-image: url('/media/club.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+}
+
+/*--------------------------------------------------------------------- Buttons */
+
+.button-white {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+    font-size: 1rem;
+    border-radius: 0;
+    padding: 15px 40px 15px 40px;
+    letter-spacing: 2px;
+}
+
+.button-white:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    font-size: 1rem;
+    padding: 15px 40px 15px 40px;
+}
+
+.button-black {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    font-size: 1rem;
+    border-radius: 0;
+    padding: 15px 40px 15px 40px;
+    letter-spacing: 2px;
+}
+
+.button-black:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    font-size: 1rem;
+    padding: 15px 40px 15px 40px;
+}
+
+/*--------------------------------------------------------------------- Cards */
+
+
+
+/*--------------------------------------------------------------------- Footer */
+
+
+
+/*--------------------------------------------------------------------- Forms */
+
+
+
+/*--------------------------------------------------------------------- Media Queries */
+
+@media screen and (max-width: 1200px) {
+    .l-space {
+        letter-spacing: 1px;
+    }
+}
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #hero {
+        border-left: 15px solid white;
+        border-right: 15px solid white;
+    }
+}

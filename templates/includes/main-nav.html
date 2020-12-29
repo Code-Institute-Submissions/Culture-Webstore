@@ -1,0 +1,157 @@
+<!-- bumper -->
+<div id="bumpber" class="bg-black pb-1 fixed-top text-white px-5">
+    <div class="container-nav">
+        <div class="row px-3">
+            <div class="col-6 ">FREE DELIVERY WHEN YOU SPEND €50+</div>
+            <div class="col-6 text-right">+353 7722666273</div>
+        </div>
+    </div>
+</div>
+
+<!-- nav -->
+<nav class="navbar navbar-expand-md navbar-light l-space fixed-top mt-4">
+    <div class="container-fluid px-0 px-md-5">
+        <a class="navbar-brand d-md-none" href="#"><img class="" src="/media/culture.svg"
+                alt="Culture brand logo"></a>
+        <button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#navbarToggle"
+            aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarToggle">
+            <ul class="navbar-nav pr-0 text-right text-sm-left pl-0">
+                <li class="nav-item p-0 dropdown dropdown-hover position-static text-right text-md-left">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="">
+                        <span class="py-5">Wear</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-full p-0 rounded-0 border-0 mt-0" role="menu">
+                        <div class="container p-0">
+                            <div class="row w-100">
+                                <h4
+                                    class="col-12 text-right text-sm-center d-block d-md-none text-uppercase py-3 pr-0 m-0 letter-space text-black">
+                                    <a href="" class="">
+                                        <p>All Products</p>
+                                    </a>
+                                </h4>
+                                <div
+                                    class="col-12 col-sm-6 col-lg-3 my-2 mt-md-5 text-right text-sm-center text-lg-left pr-0">
+                                    <h6 class="font-weight-bold text-uppercase">MENS</h6>
+                                    <ul class="list-unstyled p-0">
+                                        <li class="nav-item"><a href=""
+                                                class="nav-link text-small pb-0">Tees</a></li>
+                                        <li class="nav-item"><a href=""
+                                                class="nav-link text-small pb-0 ">Footwear</a></li>
+                                        <li class="nav-item"><a href=""
+                                                class="nav-link text-small pb-0 ">Jeans</a></li>
+                                        <li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Gym
+                                                Wear</a></li>
+                                        <li class="nav-item"><a href=""
+                                                class="nav-link text-small pb-0">Accessories</a></li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="col-12 col-sm-6 col-lg-3 my-2 mt-md-5 text-right text-sm-center text-lg-left pr-0">
+                                    <h6 class="font-weight-bold text-uppercase">WOMENS</h6>
+                                    <ul class="list-unstyled">
+                                        <li class="nav-item"><a href=""
+                                                class="nav-link text-small pb-0">Tees</a></li>
+                                        <li class="nav-item"><a href=""
+                                                class="nav-link text-small pb-0 ">Footwear</a></li>
+                                        <li class="nav-item"><a href=""
+                                                class="nav-link text-small pb-0 ">Jeans</a></li>
+                                        <li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Gym
+                                                Wear</a></li>
+                                        <li class="nav-item"><a href=""
+                                                class="nav-link text-small pb-0">Accessories</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-lg-6 px-0 d-none d-lg-block"
+                                    style="background: center center url(https://images.pexels.com/photos/4177682/pexels-photo-4177682.jpeg)no-repeat; height: 300px; background-size: cover;">
+                                </div>
+                            </div>
+                        </div>
+                        <h4 id="all-products"
+                            class="scroll-left bg-black col-12 d-none d-md-flex text-right text-sm-center text-uppercase py-3 pr-0 m-0 letter-space">
+                            <a href="" class="">
+                                <p>View All Products > > > View All Products > > > View All Products > > > View
+                                    All Products > > >
+                                    View All Products > > > </p>
+                            </a>
+                        </h4>
+                    </div>
+                </li>
+                <li class="nav-item text-right text-md-left">
+                    <a class="nav-link" href="#">Play</a>
+                </li>
+                <li class="nav-item text-right text-md-left">
+                    <a class="nav-link" href="#">Live</a>
+                </li>
+            </ul>
+
+            <a class="navbar-brand d-none d-md-block mx-auto blur" href="#"><img class="py-0 py-sm-2"
+                    src="/media/culture.svg" alt="Culture brand logo">
+            </a>
+
+            <ul class="navbar-nav text-right pl-5">
+                <li class="nav-item border-none border-sm-right">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#search-modal">
+                        <i class="lni lni-search-alt"></i>
+                        <span class="d-inline d-md-none d-lg-inline">Search</span></a>
+                </li>
+                <li class="nav-item border-none border-sm-right dropdown">
+                    <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <div class="text-right">
+                            <i class="lni lni-user"></i>
+                            <span class="d-inline d-md-none d-lg-inline">Account</span>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu border-0 rounded-0 w-100 text-right" aria-labelledby="user-options">
+                        {% if request.user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                        <a href="" class="dropdown-item">Product Management</a>
+                        {% endif %}
+                        <a href="" class="dropdown-item">My Profile</a>
+                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                        {% else %}
+                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                        {% endif %}
+                    </div>
+                </li>
+                <li class="nav-item border-none border-sm-right">
+                    <a class="nav-link" href="#">
+                        <i class="lni lni-cart"></i>
+                        <span class="d-inline d-md-none d-lg-inline">
+                            {% if grand_total %}
+                            {{ grand_total|floatformat:2 }}
+                            {% else %}
+                            Cart
+                            {% endif %}
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Search Modal -->
+<div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="search-modal"
+    aria-hidden="true">
+    <div class="modal-dialog border-0 modal-dialog-centered modal-lg rounded-0" role="document">
+        <div class="modal-content rounded-0 border-0 bg-transparent">
+            <div class="modal-body m-5">
+                <h1 class="display-3 text-center mb-3">I'm looking for...</h1>
+                <form method="GET" action="" class="search-form">
+                    <div class="input-group col-12 pt-5 pb-4">
+                        <input class="form-control border-top-0 border-right-0 border-left-0 rounded-0 py-4"
+                            type="text" name="q" placeholder="Search here" aria-label="Search" autofocus>
+                    </div>
+                    <div class="col-12 mh-25 text-center">
+                        <button type="submit" class="btn button-black h-100 text-uppercase">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
