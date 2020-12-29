@@ -194,6 +194,13 @@ a:hover {
     letter-spacing: 1.5px;
 }
 
+.text-accent {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 170%;
+}
+
 /*--------------------------------------------------------------------- Image / Adjustments */
 
 #hero {
@@ -209,6 +216,86 @@ a:hover {
     background-position: top;
     background-size: cover;
 }
+
+#feature-1 {
+    height: 600px;
+    background-image: url(/media/555x555px.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+#feature-2 {
+    height: 285px;
+    background-image: url(/media/540x290px.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#feature-3 {
+    height: 287px;
+    background-image: url(/media/540x290px-2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#features a {
+    color: white;
+    transition-duration: .2s;
+}
+
+#features a:hover {
+    color: white;
+    letter-spacing: 3px;
+}
+
+.parent {
+    overflow: hidden;
+}
+
+.child {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .9s;
+    -moz-transition: all .9s;
+    -o-transition: all .9s;
+    transition: all .9s;
+}
+
+.parent:hover .child,
+.parent:focus .child {
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    transform: scale(1.15);
+}
+
+.features-title {
+    display: block;
+    color: white;
+    font-family: 'Fahkwang', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-align: left;
+    margin: auto;
+    position: absolute;
+    text-decoration: none;
+    top: 20px;
+    left: 20px;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.features-title:hover {
+    text-decoration: none;
+}
+
 
 /*--------------------------------------------------------------------- Buttons */
 
@@ -279,5 +366,7 @@ a:hover {
     #hero {
         border-left: 15px solid white;
         border-right: 15px solid white;
+        height: 300px;
+        background-position: bottom;
     }
 }
