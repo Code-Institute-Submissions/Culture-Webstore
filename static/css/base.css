@@ -201,6 +201,12 @@ a:hover {
     color: white;
 }
 
+.dropdown-item:hover, .dropdown-item:focus {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+}
+
 /*--------------------------------------------------------------------- Special paddings/margins/text */
 
 .letter-space {
@@ -397,6 +403,13 @@ a:hover {
     }
 }
 
+/* fixed top navbar only on medium and up */
+@media (min-width: 768px) {
+    .header-container {
+        padding-top: 108px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     #hero {
         border-left: 15px solid white;
@@ -410,5 +423,15 @@ a:hover {
         -webkit-text-stroke: 1px black;
         -webkit-text-fill-color: transparent;
         text-align: center;
+    }
+}
+
+@media (min-width: 576px) {
+    .header-container {
+        padding-top: 76px;
+    }
+
+    .credit-cards {
+        max-width: 90%;
     }
 }
