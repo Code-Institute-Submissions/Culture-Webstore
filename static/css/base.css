@@ -207,6 +207,14 @@ a:hover {
     background-color: black;
 }
 
+#bumpber {
+    padding-top: 2px;
+}
+
+#bumpber a:hover {
+    color: blueviolet !important;
+}
+
 /*--------------------------------------------------------------------- Special paddings/margins/text */
 
 .letter-space {
