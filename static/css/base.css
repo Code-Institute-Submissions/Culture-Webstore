@@ -326,7 +326,7 @@ a:hover {
 }
 
 .credit-cards {
-    max-width: 300px;
+    max-width: 250px;
 }
 
 /*--------------------------------------------------------------------- Buttons */
@@ -429,9 +429,5 @@ a:hover {
 @media (min-width: 576px) {
     .header-container {
         padding-top: 76px;
-    }
-
-    .credit-cards {
-        max-width: 90%;
     }
 }
