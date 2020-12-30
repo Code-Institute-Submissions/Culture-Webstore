@@ -65,13 +65,15 @@
     {% block featured %}
     {% endblock %}
 
-    {% block info %}
+    {% block iconinfo %}
+        {% include 'includes/icon-info.html' %}
     {% endblock %}
 
     {% block subscribe %}
     {% endblock %}
 
     {% block footer %}
+        {% include 'includes/footer.html' %}
     {% endblock %}
 
     {% block postloadjs %}
