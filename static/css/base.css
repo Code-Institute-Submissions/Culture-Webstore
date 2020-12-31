@@ -196,7 +196,7 @@ a:hover {
     }
 }
 
-#all-products a {
+.all-products a {
     font-size: 1.5em;
     color: white;
 }
@@ -411,6 +411,7 @@ a:hover {
     -moz-transition: all .9s ease;
     -o-transition: all .9s ease;
     -ms-transition: all .9s ease;
+    transition: all .9s ease;
 }
 
 #featured-products .zoomer .image-box img {
@@ -418,6 +419,7 @@ a:hover {
     -moz-transition: all .9s ease;
     -o-transition: all .9s ease;
     -ms-transition: all .9s ease;
+    transition: all .9s ease;
     width: 100%;
     height: 100%;
     overflow: hidden;

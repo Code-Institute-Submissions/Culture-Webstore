@@ -28,52 +28,52 @@
                             <div class="row w-100">
                                 <h6
                                     class="col-12 font-weight-bold text-right text-sm-center d-block d-md-none text-uppercase py-2 pr-0 m-0 letter-space text-black">
-                                    <a href="{% url 'products' %}">
+                                    <a href="{% url 'products' %}?category=m_tees,m_tops,m_bottoms,m_footwear,m_accessories,w_tees,w_tops,w_bottoms,w_footwear,w_accessories">
                                         <p>All Products</p>
                                     </a>
                                 </h6>
                                 <div class="col-12 col-sm-6 col-lg-3 my-2 mt-md-5 text-right text-sm-center text-lg-left pr-0">
                                     <h6 class="font-weight-bold text-uppercase">
-                                        <a href="" class="">MENS</a>
+                                        <a href="{% url 'products' %}?category=m_tees,m_tops,m_bottoms,m_footwear,m_accessories" class="">MENS</a>
                                     </h6>
                                     <ul class="list-unstyled p-0">
                                         <li class="nav-item">
-                                            <a href="" class="nav-link text-small pl-0">Tees</a>
+                                            <a href="{% url 'products' %}?category=m_tees" class="nav-link text-small pl-0">Tees</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="" class="nav-link text-small pl-0 ">Tops</a>
+                                            <a href="{% url 'products' %}?category=m_tops" class="nav-link text-small pl-0 ">Tops</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="" class="nav-link text-small pl-0 ">Bottoms</a>
+                                            <a href="{% url 'products' %}?category=m_bottoms" class="nav-link text-small pl-0 ">Bottoms</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="" class="nav-link text-small pl-0 ">Footwear</a>
+                                            <a href="{% url 'products' %}?category=m_footwear" class="nav-link text-small pl-0 ">Footwear</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="" class="nav-link text-small pl-0">Accessories</a>
+                                            <a href="{% url 'products' %}?category=m_accessories" class="nav-link text-small pl-0">Accessories</a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div
                                     class="col-12 col-sm-6 col-lg-3 my-2 mt-md-5 text-right text-sm-center text-lg-left pr-0">
                                     <h6 class="font-weight-bold text-uppercase">
-                                        <a href="" class="">WOMENS</a>
+                                        <a href="{% url 'products' %}?category=w_tees,w_tops,w_bottoms,w_footwear,w_accessories" class="">WOMENS</a>
                                     </h6>
                                     <ul class="list-unstyled p-0">
                                         <li class="nav-item">
-                                            <a href="" class="nav-link text-small pl-0">Tees</a>
+                                            <a href="{% url 'products' %}?category=w_tees" class="nav-link text-small pl-0">Tees</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="" class="nav-link text-small pl-0 ">Tops</a>
+                                            <a href="{% url 'products' %}?category=w_tops" class="nav-link text-small pl-0 ">Tops</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="" class="nav-link text-small pl-0 ">Bottoms</a>
+                                            <a href="{% url 'products' %}?category=w_bottoms" class="nav-link text-small pl-0 ">Bottoms</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="" class="nav-link text-small pl-0 ">Footwear</a>
+                                            <a href="{% url 'products' %}?category=w_footwear" class="nav-link text-small pl-0 ">Footwear</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="" class="nav-link text-small pl-0">Accessories</a>
+                                            <a href="{% url 'products' %}?category=w_accessories" class="nav-link text-small pl-0">Accessories</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -82,9 +82,8 @@
                                 </div>
                             </div>
                         </div>
-                        <h4 id="all-products"
-                            class="scroll-left bg-black col-12 d-none d-md-flex text-right text-sm-center text-uppercase py-3 pr-0 m-0 letter-space">
-                            <a href="{% url 'products' %}" class="">
+                        <h4 class="all-products scroll-left bg-black col-12 d-none d-md-flex text-right text-sm-center text-uppercase py-3 pr-0 m-0 letter-space">
+                            <a href="{% url 'products' %}?category=m_tees,m_tops,m_bottoms,m_footwear,m_accessories,w_tees,w_tops,w_bottoms,w_footwear,w_accessories" class="">
                                 <p>View All Products > > > View All Products > > > View All Products > > > View
                                     All Products > > > View All Products > > > 
                                 </p>
@@ -100,52 +99,52 @@
                         <div class="container p-0">
                             <div class="row w-100">
                                 <h6 class="col-12 font-weight-bold text-right text-sm-center d-block d-md-none text-uppercase py-2 pr-0 m-0 letter-space text-black">
-                                    <a href="{% url 'products' %}">
+                                    <a href="{% url 'products' %}?category=w_guitar,w_bass,w_keys_synth,w_mpc,e_accessories,a_guitar,a_bass,a_piano,a_percussion,a_accessories">
                                         <p>All Instruments</p>
                                     </a>
                                 </h6>
                                 <div class="col-12 col-sm-6 col-lg-3 my-2 mt-md-5 text-right text-sm-center text-lg-left pr-0">
                                     <h6 class="font-weight-bold text-uppercase">
-                                        <a href="" class="">Wired</a>
+                                        <a href="{% url 'products' %}?category=w_guitar,w_bass,w_keys_synth,w_mpc,e_accessories" class="">Wired</a>
                                     </h6>
                                     <ul class="list-unstyled p-0">
                                         <li class="nav-item">
-                                            <a href="" class="nav-link text-small pl-0">Guitar</a>
+                                            <a href="{% url 'products' %}?category=w_guitar" class="nav-link text-small pl-0">Guitar</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="" class="nav-link text-small pl-0 ">Bass</a>
+                                            <a href="{% url 'products' %}?category=w_bass" class="nav-link text-small pl-0 ">Bass</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="" class="nav-link text-small pl-0 ">Keys/Synth</a>
+                                            <a href="{% url 'products' %}?category=w_keys_synth" class="nav-link text-small pl-0 ">Keys/Synth</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="" class="nav-link text-small pl-0 ">MPC</a>
+                                            <a href="{% url 'products' %}?category=w_mpc" class="nav-link text-small pl-0 ">MPC</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="" class="nav-link text-small pl-0">Accessories</a>
+                                            <a href="{% url 'products' %}?category=e_accessories" class="nav-link text-small pl-0">Accessories</a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div
                                     class="col-12 col-sm-6 col-lg-3 my-2 mt-md-5 text-right text-sm-center text-lg-left pr-0">
                                     <h6 class="font-weight-bold text-uppercase">
-                                        <a href="" class="">Acoustic</a>
+                                        <a href="{% url 'products' %}?category=a_guitar,a_bass,a_piano,a_percussion,a_accessories" class="">Acoustic</a>
                                     </h6>
                                     <ul class="list-unstyled p-0">
                                         <li class="nav-item">
-                                            <a href="" class="nav-link text-small pl-0">Guitar</a>
+                                            <a href="{% url 'products' %}?category=a_guitar" class="nav-link text-small pl-0">Guitar</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="" class="nav-link text-small pl-0 ">Bass</a>
+                                            <a href="{% url 'products' %}?category=a_bass" class="nav-link text-small pl-0 ">Bass</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="" class="nav-link text-small pl-0 ">Piano</a>
+                                            <a href="{% url 'products' %}?category=a_piano" class="nav-link text-small pl-0 ">Piano</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="" class="nav-link text-small pl-0 ">Percussion</a>
+                                            <a href="{% url 'products' %}?category=a_percussion" class="nav-link text-small pl-0 ">Percussion</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="" class="nav-link text-small pl-0">Accessories</a>
+                                            <a href="{% url 'products' %}?category=a_accessories" class="nav-link text-small pl-0">Accessories</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -154,9 +153,8 @@
                                 </div>
                             </div>
                         </div>
-                        <h4 id="all-products"
-                            class="scroll-left bg-black col-12 d-none d-md-flex text-right text-sm-center text-uppercase py-3 pr-0 m-0 letter-space">
-                            <a href="{% url 'products' %}" class="">
+                        <h4 class="all-products scroll-left bg-black col-12 d-none d-md-flex text-right text-sm-center text-uppercase py-3 pr-0 m-0 letter-space">
+                            <a href="{% url 'products' %}?category=w_guitar,w_bass,w_keys_synth,w_mpc,e_accessories,a_guitar,a_bass,a_piano,a_percussion,a_accessories" class="">
                                 <p>View All Products > > > View All Products > > > View All Products > > > View
                                     All Products > > > View All Products > > > 
                                 </p>
