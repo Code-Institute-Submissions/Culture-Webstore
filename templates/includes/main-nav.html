@@ -11,7 +11,7 @@
 <!-- nav -->
 <nav class="navbar navbar-expand-md navbar-light l-space fixed-top mt-0 mt-sm-4">
     <div class="container-fluid px-0 px-lg-5">
-        <a class="navbar-brand d-md-none m-0" href="#"><img class="logo-mobile" src="/media/culture.svg"
+        <a class="navbar-brand d-md-none m-0" href="{% url 'home' %}"><img class="logo-mobile" src="/media/culture.svg"
                 alt="Culture brand logo"></a>
         <button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#navbarToggle"
             aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +28,7 @@
                             <div class="row w-100">
                                 <h6
                                     class="col-12 font-weight-bold text-right text-sm-center d-block d-md-none text-uppercase py-2 pr-0 m-0 letter-space text-black">
-                                    <a href="">
+                                    <a href="{% url 'products' %}">
                                         <p>All Products</p>
                                     </a>
                                 </h6>
@@ -84,10 +84,10 @@
                         </div>
                         <h4 id="all-products"
                             class="scroll-left bg-black col-12 d-none d-md-flex text-right text-sm-center text-uppercase py-3 pr-0 m-0 letter-space">
-                            <a href="" class="">
+                            <a href="{% url 'products' %}" class="">
                                 <p>View All Products > > > View All Products > > > View All Products > > > View
-                                    All Products > > >
-                                    View All Products > > > </p>
+                                    All Products > > > View All Products > > > 
+                                </p>
                             </a>
                         </h4>
                     </div>
@@ -99,9 +99,8 @@
                     <div class="dropdown-menu dropdown-menu-full p-0 rounded-0 border-0 mt-0" role="menu">
                         <div class="container p-0">
                             <div class="row w-100">
-                                <h6
-                                    class="col-12 font-weight-bold text-right text-sm-center d-block d-md-none text-uppercase py-2 pr-0 m-0 letter-space text-black">
-                                    <a href="">
+                                <h6 class="col-12 font-weight-bold text-right text-sm-center d-block d-md-none text-uppercase py-2 pr-0 m-0 letter-space text-black">
+                                    <a href="{% url 'products' %}">
                                         <p>All Instruments</p>
                                     </a>
                                 </h6>
@@ -157,7 +156,7 @@
                         </div>
                         <h4 id="all-products"
                             class="scroll-left bg-black col-12 d-none d-md-flex text-right text-sm-center text-uppercase py-3 pr-0 m-0 letter-space">
-                            <a href="" class="">
+                            <a href="{% url 'products' %}" class="">
                                 <p>View All Products > > > View All Products > > > View All Products > > > View
                                     All Products > > > View All Products > > > 
                                 </p>
@@ -170,7 +169,7 @@
                 </li>
             </ul>
 
-            <a class="navbar-brand d-none d-md-block mx-auto blur" href="#"><img class="py-0 py-sm-2"
+            <a class="navbar-brand d-none d-md-block mx-auto blur" href="{% url 'home' %}"><img class="py-0 py-sm-2"
                     src="/media/culture.svg" alt="Culture brand logo">
             </a>
 
@@ -234,7 +233,7 @@
         <div class="modal-content rounded-0 border-0 bg-transparent">
             <div class="modal-body m-0 m-sm-5">
                 <h1 class="display-3 text-center mb-3">I'm looking for...</h1>
-                <form method="GET" action="" class="search-form">
+                <form method="GET" action="{% url 'products' %}" class="search-form">
                     <div class="input-group col-12 pt-5 pb-4">
                         <input class="form-control border-top-0 border-right-0 border-left-0 rounded-0 py-4" type="text"
                             name="q" placeholder="Search here" aria-label="Search" autofocus>

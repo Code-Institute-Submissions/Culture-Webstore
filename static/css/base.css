@@ -228,6 +228,22 @@ a:hover {
     line-height: 170%;
 }
 
+.text-main {
+    font-family: 'Fahkwang', sans-serif;
+    letter-spacing: 1px;
+}
+
+.product-page-price {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 3em;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.back-to-products:hover {
+    letter-spacing: .3em;
+}
+
 /*--------------------------------------------------------------------- Image / Adjustments */
 
 #hero {
@@ -337,6 +353,13 @@ a:hover {
     max-width: 250px;
 }
 
+#category-header {
+    background-image: url('/media/film-strip.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 /*--------------------------------------------------------------------- Buttons */
 
 .button-white {
@@ -377,7 +400,92 @@ a:hover {
 
 /*--------------------------------------------------------------------- Cards */
 
+/* featured products hover zoom */
 
+#featured-products .zoomer .image-box {
+    overflow: hidden;
+}
+
+#featured-products .zoomer .image-box img {
+    -webkit-transition: all .9s ease;
+    -moz-transition: all .9s ease;
+    -o-transition: all .9s ease;
+    -ms-transition: all .9s ease;
+}
+
+#featured-products .zoomer .image-box img {
+    -webkit-transition: all .9s ease;
+    -moz-transition: all .9s ease;
+    -o-transition: all .9s ease;
+    -ms-transition: all .9s ease;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#featured-products .zoomer:hover img {
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    transform: scale(1.15);
+}
+
+.add-to-cart {
+    background-color: #000000;
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0;
+    transform: translate(0px, 70px);
+    -webkit-transform: translate(0px, 70px);
+    -moz-transform: translate(0px, 70px);
+    -o-transform: translate(0px, 70px);
+    -ms-transform: translate(0px, 70px);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-to-cart .atc {
+    font-size: 10px;
+    color: #fff;
+    position: relative;
+    margin: 0 auto;
+}
+
+.card:hover .add-to-cart {
+    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.icon {
+    max-width: 30px;
+    opacity: .6;
+}
+
+.icon:hover {
+    opacity: 1;
+}
+
+.cart-icon {
+    cursor: cell;
+}
+
+.border-r-1 {
+    border-right: 2px solid white;
+}
 
 /*--------------------------------------------------------------------- Footer */
 

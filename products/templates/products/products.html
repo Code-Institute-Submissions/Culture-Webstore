@@ -17,10 +17,51 @@
 {% block content %}
 
 <!-- Products -->
-<div class="container pt-5">
+<div class="container-fluid mt-4">
     <div class="row">
-        <div class="col">
-            {{ products }}
+        <div id="category-header" class="col text-center justify-content-center align-items-center py-5">
+            <h1 class="logo-font py-3 text-white letter-space">Products</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div id="featured-products" class="col-10 offset-1 py-5">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4">
+                {% for product in products %}
+                <div class="col mb-4 zoomer">
+                    <div class="card image-box rounded-0 border-0">
+                        {% if product.image %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img src="{{ product.image.url }}" class="card-img-top  rounded-0" alt="{{ product.name }}">
+                        
+                        {% else %}
+                        <a href="{% url 'product_detail' product.id %}">
+                        <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top  rounded-0" alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
+                        <div class="add-to-cart text-center">
+                            <div class="d-flex atc col-12 text-center">
+                                <div class="col-6 border-r-1 pr-4">
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <img class="icon" src="/media/view.svg" alt="eye view icon">
+                                    </a>
+                                </div>
+                                <div class="col-6 pl-4">
+                                    <a href="#">
+                                        <img class="icon cart-icon" src="/media/cart.svg" alt="cart icon">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-0 pt-3">
+                        <a href="#">
+                            <h4 class="product-title">{{ product.name }}</h4>
+                        </a>
+                        <h5 class="product-price">€{{ product.price }}</h5>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
