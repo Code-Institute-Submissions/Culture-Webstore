@@ -20,7 +20,18 @@
 <div class="container-fluid mt-4">
     <div class="row">
         <div id="category-header" class="col text-center justify-content-center align-items-center py-5">
-            <h1 class="logo-font py-3 text-white letter-space">Products</h1>
+            <h1 class="logo-font py-3 text-white letter-space"><a class="text-white" href="{% url 'products' %}?category=m_tees,m_tops,m_bottoms,m_footwear,m_accessories,w_tees,w_tops,w_bottoms,w_footwear,w_accessories">Products</a></h1> 
+            {% for c in current_categories %}
+                {% if c.friendly_name == 'Mens Tees' %} 
+                <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                    <span class="p-2 badge badge-white text-white rounded-0 border border-dark">{{ c.friendly_name }}</span>
+                </a>
+                {% elif c.friendly_name == 'Mens Tops' %} 
+                <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                    <span class="p-2 badge badge-white text-white rounded-0 border border-dark">{{ c.friendly_name }}</span>
+                </a>
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
     <div class="row">
