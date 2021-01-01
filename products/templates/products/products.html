@@ -24,14 +24,14 @@
             <h3 class=""><a href="{% url 'products' %}?category=m_tees,m_tops,m_bottoms,m_footwear,m_accessories" class="pr-2 pr-sm-5 text-white {% for c in current_categories %} {% if 'm_' in c.name %} text-danger font-italic {% endif %} {% endfor %}">Mens</a><a href="{% url 'products' %}?category=w_tees,w_tops,w_bottoms,w_footwear,w_accessories" class="pl-2 pl-sm-5 text-white {% for c in current_categories %} {% if 'w_' in c.name %} text-danger font-italic {% endif %} {% endfor %}">Womens</a></h3>
             {% for c in current_categories %}
                 {% if 'm_' in c.name %} 
-                <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                     <span class="p-2 badge badge-white mb-1 text-white rounded-0 border border-dark">{{ c.friendly_name }}</span>
                 </a>
                 {% endif %}
             {% endfor %}
             {% for c in current_categories %}
                 {% if 'w_' in c.name %}
-                <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                     <span class="p-2 badge badge-white mb-1 text-white rounded-0 border border-dark">{{ c.friendly_name }}</span>
                 </a>
                 {% endif %}
