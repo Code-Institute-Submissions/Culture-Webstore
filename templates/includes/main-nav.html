@@ -2,7 +2,7 @@
 <div id="bumpber" class="d-none d-sm-block bg-black pb-1 fixed-top text-white px-3 px-md-4 px-lg-5">
     <div class="">
         <div class="row px-0 px-lg-3">
-            <div class="col-6"><span class="font-weight-bold">FREE DELIVERY |</span> WHEN YOU SPEND €50+</div>
+            <div class="col-6"><span class="font-weight-bold">FREE DELIVERY |</span> WHEN YOU SPEND €{{free_delivery_threshold}}+</div>
             <div class="col-6 text-right letter-space"><span class="pr-3"><a href="" class="text-white">ABOUT</a></span><span><a href="" class="text-white">CONTACT</a></span></div>
         </div>
     </div>
@@ -199,7 +199,7 @@
                     </div>
                 </li>
                 <li class="nav-item border-none border-sm-right">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{% url 'view_bag' %}">
                         <i class="lni lni-cart"></i>
                         <span class="d-inline d-md-none d-lg-inline">
                             {% if grand_total %}
