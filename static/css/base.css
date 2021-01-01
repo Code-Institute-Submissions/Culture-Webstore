@@ -215,6 +215,21 @@ a:hover {
     color: blueviolet !important;
 }
 
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    background: black;
+    z-index: 999;
+    border-radius: 50%;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
 /*--------------------------------------------------------------------- Special paddings/margins/text */
 
 .letter-space {
@@ -396,6 +411,15 @@ a:hover {
     border: 2px solid black;
     font-size: 1rem;
     padding: 15px 40px 15px 40px;
+}
+
+.category-badge {
+    
+}
+
+.badge:hover {
+    background-color: white;
+    color: black !important;
 }
 
 /*--------------------------------------------------------------------- Cards */
