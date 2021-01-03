@@ -189,9 +189,15 @@
                         </div>
                     </div>
                     <div class="text-center col-12 w-100 p-0 mt-3 mb-2">
-                        <a href="{% url 'products' %}" class="btn w-100 button-black rounded-0 my-2">
-                            <span class="text-uppercase">Back to products page</span>
-                        </a>
+                        {% if from_profile %}
+                            <a href="{% url 'profile' %}" class="btn w-100 button-black rounded-0 my-2">
+                                <span class="text-uppercase">Back to profile</span>
+                            </a>
+                        {% else %}
+                            <a href="{% url 'products' %}" class="btn w-100 button-black rounded-0 my-2">
+                                <span class="text-uppercase">Back to products page</span>
+                            </a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
