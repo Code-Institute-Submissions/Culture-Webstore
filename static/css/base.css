@@ -723,6 +723,10 @@ tr > th:last-of-type {
     border-radius: 0;
 }
 
+.border-black {
+    border: 1px solid #000;
+}
+
 /*--------------------------------------------------------------------- Media Queries */
 
 @media screen and (max-width: 1200px) {
