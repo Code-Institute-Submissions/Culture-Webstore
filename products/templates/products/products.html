@@ -98,7 +98,13 @@
                         <a href="#">
                             <h4 class="product-title">{{ product.name }}</h4>
                         </a>
-                        <h5 class="product-price">€{{ product.price }}</h5>
+                        <h5 class="product-price d-inline-block">€{{ product.price }}</h5>
+                        {% if request.user.is_superuser %}
+                        <small class="text-uppercase float-right pb-0">
+                            <a class="pr-3" href="{% url 'edit_product' product.id %}">Edit</a>
+                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                        </small>
+                        {% endif %}
                     </div>
                 </div>
                 {% endfor %}

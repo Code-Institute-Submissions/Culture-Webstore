@@ -40,6 +40,14 @@
                     </p>
                     {% endif %}
                 <h3 class="product-page-price pb-4 text-left">€{{ product.price }}</h3>
+                {% if request.user.is_superuser %}
+                <div class="text-muted">
+                    <small class="text-uppercase">
+                        <a href="{% url 'edit_product' product.id %}">Edit</a>
+                        <a class="text-danger pl-2" href="{% url 'delete_product' product.id %}">Delete</a>
+                    </small>
+                </div>
+                {% endif %}
                 <p class="mt-3 text-main">{{ product.description }}</p>
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
