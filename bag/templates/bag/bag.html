@@ -18,7 +18,7 @@
 <div class="container-fluid mb-2 py-4">
     <div class="row">
         <div id="category-header" class="col text-center py-5">
-            <h1 class="logo-font pt-5 pb-4 letter-space"><a class="text-white" href="">Your Items</a></h1> 
+            <h1 class="logo-font pt-5 pb-4 letter-space text-white">Your Items</h1> 
         </div>
     </div>
     <div class="container mt-5">
@@ -129,8 +129,8 @@
                         </table>
                     </div>
                 {% else %}
-                    <p class="lead mb-5">Your bag is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                    <p class="lead mb-5 text-center">Your bag is empty.</p>
+                    <a href="{% url 'products' %}" class="col-10 offset-1 col-lg-4 offset-lg-4 btn button-black-border w-100 mb-5">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
