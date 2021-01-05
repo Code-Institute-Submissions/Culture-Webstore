@@ -20,8 +20,12 @@
 <div class="container-fluid mt-4">
     <div class="row">
         <div id="category-header" class="col text-center py-5">
-            <h1 class="logo-font py-3 letter-space"><a class="text-white" href="{% url 'products' %}?category=m_tees,m_tops,m_bottoms,m_footwear,m_accessories,w_tees,w_tops,w_bottoms,w_footwear,w_accessories">Products</a></h1> 
-            <h3 class=""><a href="{% url 'products' %}?category=m_tees,m_tops,m_bottoms,m_footwear,m_accessories" class="pr-2 pr-sm-5 text-white {% for c in current_categories %} {% if 'm_' in c.name %} text-danger font-italic {% endif %} {% endfor %}">Mens</a><a href="{% url 'products' %}?category=w_tees,w_tops,w_bottoms,w_footwear,w_accessories" class="pl-2 pl-sm-5 text-white {% for c in current_categories %} {% if 'w_' in c.name %} text-danger font-italic {% endif %} {% endfor %}">Womens</a></h3>
+            <h1 class="letter-space"><a class="{% if search_term or current_categories or current_sorting != 'None_None' %} text-white {% else %} text-danger {% endif %}" href="{% url 'products' %}">All Products</a></h1> 
+            <h3>
+                <a href="{% url 'products' %}?category=m_tees,m_tops,m_bottoms,m_footwear,m_accessories" class="pl-2 pr-2 pr-sm-5 text-white {% for c in current_categories %} {% if 'm_' in c.name %} text-danger {% endif %} {% endfor %}">Mens</a>
+                <span class="text-muted pl-3 pr-2">|</span>
+                <a href="{% url 'products' %}?category=w_tees,w_tops,w_bottoms,w_footwear,w_accessories" class="pl-2 pl-sm-5 text-white {% for c in current_categories %} {% if 'w_' in c.name %} text-danger {% endif %} {% endfor %}">Womens</a>
+            </h3>
             {% for c in current_categories %}
                 {% if 'm_' in c.name %} 
                 <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
@@ -50,9 +54,9 @@
                         {{ products|length }} results {% if search_term %} for <strong>"{{ search_term }}"</strong>{% endif %}
                     </p>
                 </div>
-                <div class="col-12 col-md-6 order-md-first d-flex justify-content-center justify-content-md-start mb-4 pr-5">
+                <div class="col-12 col-md-6 order-md-first d-flex justify-content-center justify-content-md-start mb-4 pr-0 pr-sm-5">
                     <div class="sort-select-wrapper w-50">
-                        <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}black{% else %}danger{% endif %}">
+                        <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}black{% else %}black{% endif %}">
                             <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                             <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                             <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
@@ -66,6 +70,37 @@
                     </div>
                 </div>
             </div>
+            {% if products|length == 0 %}
+            <div class="text-center mt-5">
+                <img src="{{ MEDIA_URL }}travolta.gif" class="card-img-top col-8 col-sm-6 col-lg-4 col-xl-3 rounded-0 pl-5" alt="John Travolta Gif">
+                <h2 class="display-4 mt-2 text-uppercase letter-space">Sorry</h2>
+                {% if search_term %}
+                    <h5>
+                        {{ products|length }} results for <strong>"{{ search_term }}"</strong>
+                    </h5>
+                    <div class="text-center my-5">
+                        <a href="{% url 'products' %}" class="btn button-black">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">Back To Shop</span>
+                        </a>
+                        <span class="d-block d-md-inline px-2 my-2 text-uppercase">Or</span>
+                        <a href="{% url 'products' %}" class="btn button-black-border" data-toggle="modal" data-target="#search-modal">
+                            <span class="text-uppercase">Search Again</span>
+                        </a>
+                    </div>
+                {% else %}
+                <h4 class="text-center">No products available</h4>
+                <a href="{% url 'products' %}" class="btn button-black-border my-5">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Back To Shop</span>
+                </a>
+                {% endif %}
+            </div>
+            {% endif %}
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4">
                 {% for product in products %}
                 <div class="col mb-4 zoomer">
@@ -117,7 +152,10 @@
         <i class="lni lni-angle-double-up text-white mx-auto my-auto"></i>
     </a>	
 </div>
+{% endblock %}
 
+{% block iconinfo %}
+    {% include 'includes/icon-info.html' %}
 {% endblock %}
 
 {% block postloadjs %}
