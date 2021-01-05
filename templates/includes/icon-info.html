@@ -1,19 +1,19 @@
 <section class="container">
     <div class="row text-center mt-5">
         <div class="col-12 col-sm-4 mb-5 px-4">
-            <img class="pb-4" src="/media/free-shipping.svg" alt="Free Shipping icon" />
+            <img class="pb-4" src="{{ MEDIA_URL }}free-shipping.svg" alt="Free Shipping icon" />
             <h4 class="font-weight-bold pb-3">Free Shipping*</h4>
-            <p class="d-none d-md-flex">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p class="d-none d-md-flex">Get free delivery when you spend €{{ free_delivery_threshold }} or more here at Culture. Enjoy shopping!</p>
+        </div>
+        <div class="col-12 col-sm-4 mb-5 px-4 text-center">
+            <img class="pb-4" src="{{ MEDIA_URL }}free-returns.svg" alt="Free Shipping icon" />
+            <h4 class="font-weight-bold pb-3">Free Returns</h4>
+            <p class="d-none d-md-flex ">To make things easy enjoy free returns on all orders within Europe.</p>
         </div>
         <div class="col-12 col-sm-4 mb-5 px-4">
-            <img class="pb-4" src="/media/free-returns.svg" alt="Free Shipping icon" />
-            <h4 class="font-weight-bold pb-3">Free Returns*</h4>
-            <p class="d-none d-md-flex">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        </div>
-        <div class="col-12 col-sm-4 mb-5 px-4">
-            <img class="pb-4" src="/media/24h-support.svg" alt="Free Shipping icon" />
+            <img class="pb-4" src="{{ MEDIA_URL }}24h-support.svg" alt="Free Shipping icon" />
             <h4 class="font-weight-bold pb-3">24hr Support</h4>
-            <p class="d-none d-md-flex">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p class="d-none d-md-flex">We are here 24 hours a day 7 days a week to help should you have any issues.</p>
         </div>
     </div>
 </section>
