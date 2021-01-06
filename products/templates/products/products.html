@@ -107,25 +107,18 @@
                     <div class="card image-box rounded-0 border-0">
                         {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
-                            <img src="{{ product.image.url }}" class="card-img-top  rounded-0" alt="{{ product.name }}">
+                            <img src="{{ product.image.url }}" class="card-img-top rounded-0" alt="{{ product.name }}">
                         
                         {% else %}
                         <a href="{% url 'product_detail' product.id %}">
-                        <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top  rounded-0" alt="{{ product.name }}">
+                        <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top rounded-0" alt="{{ product.name }}">
                         </a>
                         {% endif %}
                         <div class="add-to-cart text-center">
-                            <div class="d-flex atc col-12 text-center">
-                                <div class="col-6 border-r-1 pr-4">
-                                    <a href="{% url 'product_detail' product.id %}">
-                                        <img class="icon" src="/media/view.svg" alt="eye view icon">
-                                    </a>
-                                </div>
-                                <div class="col-6 pl-4">
-                                    <a href="#">
-                                        <img class="icon cart-icon" src="/media/cart.svg" alt="cart icon">
-                                    </a>
-                                </div>
+                            <div class="atc col-12">
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <h3 class="letter-space letter-space-animate pt-1 text-white text-center">VIEW</h3>
+                                </a>
                             </div>
                         </div>
                     </div>
