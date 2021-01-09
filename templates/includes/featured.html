@@ -1,0 +1,45 @@
+{% if featured_products|length >= 3 %} 
+<section class="container-fluid">
+    <div class="row">
+        <div id="featured-products" class="container py-4">
+            <h2 class="text-center my-4">Featured Products</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 {% if featured_products|length == 3 %} row-cols-lg-3 {% else %} row-cols-lg-4 {% endif %}">
+                {% for product in featured_products %}
+                <div class="col mb-4 zoomer">
+                    <div class="card image-box rounded-0 border-0">
+                        {% if product.image %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img src="{{ product.image.url }}" class="card-img-top rounded-0" alt="{{ product.name }}">
+                        
+                        {% else %}
+                        <a href="{% url 'product_detail' product.id %}">
+                        <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top rounded-0" alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
+                        <div class="add-to-cart text-center">
+                            <div class="atc col-12">
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <h3 class="letter-space letter-space-animate pt-1 text-white text-center">VIEW</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-0 pt-3">
+                        <a href="#">
+                            <h4 class="product-title">{{ product.name }}</h4>
+                        </a>
+                        <h5 class="product-price d-inline-block">€{{ product.price }}</h5>
+                        {% if request.user.is_superuser %}
+                        <small class="text-uppercase float-right pb-0">
+                            <a class="pr-3" href="{% url 'edit_product' product.id %}">Edit</a>
+                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                        </small>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
