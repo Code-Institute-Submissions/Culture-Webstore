@@ -9,11 +9,6 @@
 </div>
 {% endblock %}
 
-{% block subscribe %}
-    {% include 'includes/subscribe.html' %}
-{% endblock %}
-
-
 {% block content %}
 
 <!-- Product Details -->
@@ -112,6 +107,11 @@
 </div>
 
 {% endblock %}
+
+{% block iconinfo %}
+    {% include 'includes/icon-info.html' %}
+{% endblock %}
+
 
 {% block postloadjs %}
 {{ block.super }}

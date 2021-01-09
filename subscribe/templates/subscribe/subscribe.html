@@ -4,10 +4,11 @@
         <div class="col-12 pt-4 pl-4">
             <h2 class="h1 font-weight-bold text-center">Subscribe to our Newsletter</h2>
             <p class="text-center">For the latest trends and topics</p>
-            <form>
+            <form method="POST" action="{% url 'user_subscribe' %}">
+                {% csrf_token %}
                 <div class="input-group col-lg-8 offset-lg-2 pt-5 pb-4">
                     <input type="email" class="form-control border-top-0 border-right-0 border-left-0 rounded-0"
-                        id="inputEmail" placeholder="YOUR EMAIL" required="">
+                        id="id_email" name="subscriber_email" placeholder="YOUR EMAIL" required="">
                 </div>
                 <div class="col-12 mh-25 text-center">
                     <button type="submit" class="btn button-black h-100 text-uppercase">Subscribe</button>
