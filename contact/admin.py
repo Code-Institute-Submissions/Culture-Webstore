@@ -20,8 +20,8 @@ class ContactAdmin(admin.ModelAdmin):
 
     list_per_page = 20
     
-    # orders contacts by date
-    ordering = ('contact_date',)
+    # orders messages by most recent
+    ordering = ('-contact_date',)
 
 
 admin.site.register(Contact, ContactAdmin)
