@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid mb-2 py-4">
+    <div class="row">
+        <div id="category-header" class="col text-center py-5">
+            <h1 class="pt-5 pb-1 letter-space text-white">Contact Us</h1>
+            <p class="text-white text-uppercase letter-space">We're here to help</p>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-10 offset-1 mb-5">
+            <div class="row my-5 pb-5">
+                <div class="col-12 col-xl-8 offset-xl-2 mb-5 px-3 px-sm-5 py-4 shadow">
+                    <h2 class="text-center mb-4">Get In Touch</h2>
+                    <form action="{% url 'contact' %}" method="POST">
+                        {% csrf_token %}
+                        {% if user.is_authenticated %}
+                            <input type="hidden" name="user_id" value="{{ user.id }}">
+                        {% else %}
+                            <input type="hidden" name="user_id" value="0">
+                        {% endif %}
+                            <div class="form-group mt-3">
+                                {{ form|crispy }}
+                            </div>
+                        <input type="submit" value="Send" class="btn button-black contact-submit mt-2 w-50">
+                    </form>
+                </div>
+            </div>
+            <div class="row my-5">
+                <div class="card border-0 rounded-0 col-12 col-lg-4 my-2">
+                    <div class="col-12 button-black-border p-5 text-center">
+                        <a href="https://goo.gl/maps/H4RaVt1tLWfa3sKW8" target="_blank" class="text-dark">
+                            <p><small class="text-muted letter-space text-uppercase">ADDRESS</small></p>
+                            <h3>Unit 11 Grafton St.,</h3>
+                            <h3>Dublin</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="card border-0 rounded-0 col-12 col-lg-4 my-2">
+                    <div class="col-12 button-black-border p-5 text-center">
+                        <a href="tel:00353 01 123 4567" class="text-dark">
+                            <p><small class="text-muted letter-space text-uppercase">Contact Number</small></p>
+                            <h3>INT:</h3>
+                            <h3>+353 1 23 4567</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="card border-0 rounded-0 col-12 col-lg-4 my-2">
+                    <div class="col-12 button-black-border p-5 text-center">
+                        <a href="#" class="text-dark">
+                            <p><small class="text-muted letter-space text-uppercase">FREQUENTLY ASKED QUESTIONS</small></p>
+                            <h3 class="text-uppercase">Check the</h3>
+                            <h3 class="text-uppercase">List</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block iconinfo %}
+    {% include 'includes/icon-info.html' %}
+{% endblock %}
