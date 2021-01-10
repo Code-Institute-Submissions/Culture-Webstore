@@ -283,7 +283,7 @@ tr > th:last-of-type {
     height: 80vh;
     border-left: 65px solid white;
     border-right: 65px solid white;
-    background-image: url('/media/club.gif');
+    background-image: url('/static/images/club.gif');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: top;
