@@ -60,7 +60,6 @@ a:hover {
     background-color: black;
 }
 
-
 /*--------------------------------------------------------------------- Nav */
 
 .navbar {
@@ -408,8 +407,6 @@ tr > th:last-of-type {
     background-color: black;
     color: white;
     border: 2px solid black;
-    font-size: 1rem;
-    padding: 15px 40px 15px 40px;
 }
 
 .button-black {
@@ -426,8 +423,6 @@ tr > th:last-of-type {
     background-color: white;
     color: black;
     border: 2px solid black;
-    font-size: 1rem;
-    padding: 15px 40px 15px 40px;
 }
 
 .button-black-border {
@@ -444,8 +439,6 @@ tr > th:last-of-type {
     background-color: black;
     color: white;
     border: 2px solid black;
-    font-size: 1rem;
-    padding: 15px 40px 15px 40px;
 }
 
 .quantity-black-border {
@@ -471,7 +464,6 @@ tr > th:last-of-type {
     background: #222;
     color: white;
 }
-
 
 .size-black-border {
     background-color: white;
@@ -804,4 +796,41 @@ tr > th:last-of-type {
     .header-container {
         padding-top: 76px;
     }
+}
+
+@media (max-width: 320px) {
+    .button-white {
+        padding: 10px 30px 10px 30px;
+    }
+
+    .button-black {
+        padding: 10px 20px 10px 20px;
+    }
+
+    .button-black-border {
+        padding: 10px 30px 10px 30px;
+    }
+
+    .quantity-black-border {
+        padding: 12px 8px 12px 8px;
+        max-width: 30px;
+    }
+
+    .qty-btn-black {
+        padding: 9px;
+    }
+
+    .size-black-border {
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+        font-size: 1rem;
+        border-radius: 0;
+        padding: 12px 8px 12px 8px;
+        letter-spacing: 2px;
+        min-height: 60px;
+        max-width: 420px;
+        margin-right: 20px;
+    }
+
 }
