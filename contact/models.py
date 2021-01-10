@@ -9,7 +9,7 @@ class Contact(models.Model):
     """
 
     class Meta:
-        verbose_name = 'Inbox'
+        verbose_name = 'Enquiry'
         verbose_name_plural = 'Messages'
 
     full_name = models.CharField(max_length=200)
