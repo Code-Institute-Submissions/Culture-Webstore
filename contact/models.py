@@ -7,6 +7,11 @@ class Contact(models.Model):
     """
     A contact model for storing enquiry/contact info
     """
+
+    class Meta:
+        verbose_name = 'Inbox'
+        verbose_name_plural = 'Messages'
+
     full_name = models.CharField(max_length=200)
     email = models.EmailField(max_length=200)
     message = models.TextField()
