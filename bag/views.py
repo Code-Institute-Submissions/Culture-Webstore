@@ -33,12 +33,12 @@ def add_to_bag(request, item_id):
                 bag[item_id]['items_by_size'][size] = quantity
                 messages.success(request,
                                 (f'Added {size.upper()} '
-                                f'{product.name} to your bag'))
+                                f'{product.name} to your cart'))
         else:
             bag[item_id] = {'items_by_size': {size: quantity}}
             messages.success(request,
                             (f'Added {size.upper()} '
-                            f'{product.name} to your bag'))
+                            f'{product.name} to your cart'))
     else:
         if item_id in list(bag.keys()):
             bag[item_id] += quantity
@@ -47,7 +47,7 @@ def add_to_bag(request, item_id):
                             f'quantity to {bag[item_id]}'))
         else:
             bag[item_id] = quantity
-            messages.success(request, f'Added {product.name} to your bag')
+            messages.success(request, f'Added {product.name} to your cart')
 
     request.session['bag'] = bag
     return redirect(redirect_url)
@@ -77,7 +77,7 @@ def adjust_bag(request, item_id):
                 bag.pop(item_id)
             messages.success(request,
                                 (f'Added {size.upper()} '
-                                f'{product.name} to your bag'))
+                                f'{product.name} to your cart'))
     else:
         if quantity > 0:
             bag[item_id] = quantity
@@ -86,7 +86,7 @@ def adjust_bag(request, item_id):
                             f'quantity to {bag[item_id]}'))
         else:
             bag.pop(item_id)
-            messages.success(request, f'Removed {product.name} from your bag')
+            messages.success(request, f'Removed {product.name} from your cart')
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
@@ -106,10 +106,10 @@ def remove_from_bag(request, item_id):
             del bag[item_id]['items_by_size'][size]
             if not bag[item_id]['items_by_size']:
                 bag.pop(item_id)
-            messages.success(request, f'Removed {size.upper()} {product.name} from your bag')
+            messages.success(request, f'Removed {size.upper()} {product.name} from your cart')
         else:
             bag.pop(item_id)
-            messages.success(request, f'Removed {product.name} from your bag')
+            messages.success(request, f'Removed {product.name} from your cart')
 
         request.session['bag'] = bag
         return HttpResponse(status=200)
