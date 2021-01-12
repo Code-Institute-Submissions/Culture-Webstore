@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<!-- Products -->
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div id="category-header" class="col text-center py-5">
+            <h1 class="letter-space"><a class="text-white" href="{% url 'products' %}">The Blog</a></h1> 
+        </div>
+    </div>
+    <div class="row">
+        <div id="featured-products" class="col-10 offset-1 py-4">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4">
+                {% for post in posts %}
+                <div class="col mb-4 zoomer">
+                    <div class="card image-box rounded-0 border-0">
+                        <a href="#">
+                            <img src="{{ post.image_url }}" class="card-img-top rounded-0" alt="{{ post.title }}">
+                        <div class="add-to-cart text-center">
+                            <div class="atc col-12">
+                                <a href="#">
+                                    <h3 class="letter-space letter-space-animate pt-1 text-white text-center">VIEW</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-0 pt-3">
+                        <a href="#">
+                            <h4 class="product-title">{{ post.title }}</h4>
+                        </a>
+                        <h5 class="product-price d-inline-block">{{ post.slug }}</h5>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="btt-button shadow-sm">
+    <a class="btt-link d-flex h-100">
+        <i class="lni lni-angle-double-up text-white mx-auto my-auto"></i>
+    </a>	
+</div>
+{% endblock %}
+
+{% block iconinfo %}
+    {% include 'includes/icon-info.html' %}
+{% endblock %}
+
+{% block subscribe %}
+    {% include 'subscribe/subscribe.html' %}
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+    
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
+{% endblock %}
