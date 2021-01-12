@@ -284,10 +284,10 @@ tr > th:last-of-type {
     height: 80vh;
     border-left: 65px solid white;
     border-right: 65px solid white;
-    background-image: url('/static/images/club.gif');
+    background-image: url('/static/images/culture-hero-background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: top;
+    background-position: bottom;
     background-size: cover;
 }
 
@@ -390,6 +390,7 @@ tr > th:last-of-type {
     background-position: center;
     background-size: cover;
     min-height: 220px;
+    margin-top: 20px;
 }
 
 /*--------------------------------------------------------------------- Buttons */
