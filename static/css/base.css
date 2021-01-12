@@ -133,7 +133,8 @@ a:hover {
 
 .modal-backdrop.show {
     background-color: white !important;
-    opacity: .9 !important;
+    backdrop-filter: blur(15px);
+    opacity: .8 !important;
 }
 
 .form-control {
