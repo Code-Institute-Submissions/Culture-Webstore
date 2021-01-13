@@ -23,7 +23,7 @@
             {% for post in posts %}
             <div class="mb-4 zoomer">
                 <div class="card image-box rounded-0 border-0">
-                    <p class="text-white text-accent z-9000 rotate-90 position-absolute pt-5 px-3 pb-2 bg-black bottom-0 float-right">{{ post.date_added|date:'d M Y' }}</p>
+                    <p class="text-white text-accent z-999 rotate-90 position-absolute pt-5 px-3 pb-2 bg-black bottom-0 float-right">{{ post.date_added|date:'d M Y' }}</p>
                     <a href="{% url 'blog_detail' post.slug%}">
                         <img src="{{ post.image_url }}" class="card-img-top rounded-0" alt="{{ post.title }}">
                     <div class="add-to-cart text-center">
@@ -38,7 +38,7 @@
                     <a href="{% url 'blog_detail' post.slug%}">
                         <h3 class="text-main">{{ post.title }}</h3>
                     </a>
-                    <p class="card-text text-muted lead letter-space">{{ post.intro}}</p>
+                    <p class="card-text text-muted lead letter-space">{{ post.intro|truncatechars:100 }}</p>
                 </div>
                 <hr class="mx-3">
             </div>
