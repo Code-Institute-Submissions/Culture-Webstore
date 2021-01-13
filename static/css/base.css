@@ -858,4 +858,8 @@ tr > th:last-of-type {
         margin-right: 20px;
     }
 
+    .blog-header {
+        height: 250px;
+    }
+
 }

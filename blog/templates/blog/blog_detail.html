@@ -14,17 +14,17 @@
 <!-- Product Details -->
 <div class="container-fluid">
     <div class="row">
-        <div class="d-none d-lg-flex col-lg-9 position-fixed pb-5 bg-black z--9000 pl-0">
+        <div class="d-none d-lg-flex col-lg-0 col-xl-7 position-fixed pb-5 bg-black z--9000 pl-0">
             <div class="image-container my-5 p-0">
                 {% if post.image_url %}
-                        <img class="img-fluid zoomer rounded-0" src="{% firstof post.image post.image_url %}" alt="{{ post.name }}">
+                        <img class="img-fluid rounded-0" src="{% firstof post.image post.image_url %}" alt="{{ post.name }}">
                     {% else %}
                         <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                 {% endif %}
             </div>
         </div>
         
-        <div class="col-12 col-md-12 col-lg-6 offset-lg-6 col-xl-6 bg-black px-5 pb-5">
+        <div class="col-12 col-md-12 col-lg-12 offset-xl-6 col-xl-6 bg-black px-3 px-sm-5 pb-5">
             <div class="mt-md-5 pt-5">
                 <img class="img-fluid px-0 py-3 text-center card-img-top rounded-0 blog-header mb-5" src="{% firstof post.image post.image_url %}" alt="{{ post.name }}">
                 <h1 class="text-white">{{ post.title }}</h1>
