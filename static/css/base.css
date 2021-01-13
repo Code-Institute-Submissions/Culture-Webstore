@@ -275,6 +275,14 @@ tr > th:last-of-type {
     text-align: right;
 }
 
+.z-9000 {
+    z-index: 9000;
+}
+
+.rotate-90 {  
+    transform:  translateX(-50%) translateY(40%) rotate(-90deg);
+}
+
 /*--------------------------------------------------------------------- Image / Adjustments */
 
 #hero {
@@ -508,8 +516,9 @@ tr > th:last-of-type {
     -ms-transition: all .9s ease;
     transition: all .9s ease;
     width: 100%;
-    height: 100%;
     overflow: hidden;
+    height: 400px;
+    object-fit: cover;
 }
 
 #featured-products .zoomer:hover img {
@@ -791,6 +800,10 @@ tr > th:last-of-type {
         -webkit-text-stroke: 1px black;
         -webkit-text-fill-color: transparent;
         text-align: center;
+    }
+
+    #featured-products .zoomer .image-box img {
+        height: 300px;
     }
 }
 
