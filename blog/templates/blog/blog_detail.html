@@ -12,10 +12,10 @@
 {% block content %}
 
 <!-- Product Details -->
-<div class="container-fluid mt-4 mb-5 pb-5">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-12 col-md-6 col-xl-4 offset-xl-2">
-            <div class="image-container my-5">
+        <div class="d-none d-lg-flex col-lg-9 position-fixed pb-5 bg-black z--9000 pl-0">
+            <div class="image-container my-5 p-0">
                 {% if post.image_url %}
                         <img class="img-fluid zoomer rounded-0" src="{% firstof post.image post.image_url %}" alt="{{ post.name }}">
                     {% else %}
@@ -23,19 +23,20 @@
                 {% endif %}
             </div>
         </div>
-        <div class="col-12 col-md-6 col-xl-4 ">
-            <div class="mb-5 mt-md-5">
-                <p class="text-muted text-right text-uppercase letter-space-animate">
-                    <a href="{% url 'blog' %}">
+        
+        <div class="col-12 col-md-12 col-lg-6 offset-lg-6 col-xl-6 bg-black px-5 pb-5">
+            <div class="mt-md-5 pt-5">
+                <img class="img-fluid px-0 py-3 text-center card-img-top rounded-0 blog-header mb-5" src="{% firstof post.image post.image_url %}" alt="{{ post.name }}">
+                <h1 class="text-white">{{ post.title }}</h1>
+                <p class="mt-3 text-accent text-muted">Published: {{ post.date_added|date:'d M Y' }}</p>
+                <h3 class="product-page-price pb-4 text-left text-white">{{ post.intro }}</h3>
+                <p class="mt-3 text-main text-white letter-space">{{ post.body|linebreaksbr }}</p>
+                <p class="text-center text-uppercase letter-space-animate mt-5">
+                    <a href="{% url 'blog' %}" class="text-danger">
                         <i class="lni lni-arrow-left"></i>
                         Back To Blog
                     </a>
                 </p>    
-                <h1 class="">{{ post.title }}</h1>
-                <p class="mt-3 text-accent text-muted">Published: {{ post.date_added|date:'d M Y' }}</p>
-                <h3 class="product-page-price pb-4 text-left">{{ post.intro }}</h3>
-                <p class="mt-3 text-main">{{ post.body }}</p>
-                <p class="mt-3 text-main">{{ post.intro }}</p>
             </div>
         </div>
     </div>

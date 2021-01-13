@@ -275,8 +275,12 @@ tr > th:last-of-type {
     text-align: right;
 }
 
-.z-9000 {
-    z-index: 9000;
+.z-999 {
+    z-index: 999;
+}
+
+.z--9000 {
+    z-index: -9000;
 }
 
 .rotate-90 {  
@@ -583,6 +587,12 @@ tr > th:last-of-type {
 
 .border-r-1 {
     border-right: 2px solid white;
+}
+
+.blog-header {
+    height: 400px;
+    width: 100vw;
+    object-fit: cover;
 }
 
 /*--------------------------------------------------------------------- Toasts */
