@@ -38,7 +38,7 @@
                             {% if 'm_' in product.category.name %}Mens: {% else %} Womens: {% endif %} {{ product.category.friendly_name }}
                         </a>
                     </p>
-                    {% endif %}
+                {% endif %}
                 <h3 class="product-page-price pb-4 text-left">€{{ product.price }}</h3>
                 {% if request.user.is_superuser %}
                 <div class="text-muted">
