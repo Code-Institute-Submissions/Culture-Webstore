@@ -40,20 +40,20 @@
         <div class="col-12 col-sm-6">
             <div class="parent position-relative mb-3 mb-sm-0">
                 <div id="feature-1" class="child"></div>
-                <a href="#" class="features-title">Top Picks</a>
+                <a href="{% url 'products' %}" class="features-title">Shop Collection</a>
             </div>
         </div>
         <div class="col-12 col-sm-6 p-0">
             <div class="col-12 pb-0 pb-sm-4">
                 <div class="parent position-relative mb-3 mb-sm-0">
                     <div id="feature-2" class="child"></div>
-                    <a href="#" class="features-title">Top Picks</a>
+                    <a href="{% url 'products' %}?category=w_tees,w_tops,w_bottoms,w_footwear,w_accessories" class="features-title">Shop Womens</a>
                 </div>
             </div>
             <div class="col-12 pt-0 pt-sm-1">
                 <div class="parent position-relative mb-3 mb-sm-0">
                     <div id="feature-3" class="child"></div>
-                    <a href="#" class="features-title">Top Picks</a>
+                    <a href="{% url 'products' %}?category=m_tees,m_tops,m_bottoms,m_footwear,m_accessories" class="features-title">Shop Mens</a>
                 </div>
             </div>
         </div>
