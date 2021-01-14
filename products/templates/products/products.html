@@ -15,11 +15,11 @@
 <div class="container-fluid mt-4">
     <div class="row">
         <div id="category-header" class="col text-center py-5">
-            <h1 class="letter-space"><a class="{% if search_term or current_categories or current_sorting != 'None_None' %} text-white {% else %} text-danger {% endif %}" href="{% url 'products' %}">All Products</a></h1> 
+            <h1 class="letter-space"><a class="{% if search_term or current_categories or current_sorting != 'None_None' %} text-white {% else %} text-khaki {% endif %} letter-space-animate" href="{% url 'products' %}">All Products</a></h1> 
             <h3>
-                <a href="{% url 'products' %}?category=m_tees,m_tops,m_bottoms,m_footwear,m_accessories" class="pl-2 pr-2 pr-sm-5 text-white {% for c in current_categories %} {% if 'm_' in c.name %} text-danger {% endif %} {% endfor %}">Mens</a>
+                <a href="{% url 'products' %}?category=m_tees,m_tops,m_bottoms,m_footwear,m_accessories" class="pl-2 pr-2 pr-sm-5 text-white {% for c in current_categories %} {% if 'm_' in c.name %} text-khaki {% endif %} {% endfor %} letter-space-animate">Mens</a>
                 <span class="text-muted pl-3 pr-2">|</span>
-                <a href="{% url 'products' %}?category=w_tees,w_tops,w_bottoms,w_footwear,w_accessories" class="pl-2 pl-sm-5 text-white {% for c in current_categories %} {% if 'w_' in c.name %} text-danger {% endif %} {% endfor %}">Womens</a>
+                <a href="{% url 'products' %}?category=w_tees,w_tops,w_bottoms,w_footwear,w_accessories" class="pl-2 pl-sm-5 text-white {% for c in current_categories %} {% if 'w_' in c.name %} text-khaki {% endif %} {% endfor %} letter-space-animate">Womens</a>
             </h3>
             {% for c in current_categories %}
                 {% if 'm_' in c.name %} 
