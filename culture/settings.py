@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'subscribe',
     'contact',
     'blog',
+    'pages',
 
     # Other
     'crispy_forms',
