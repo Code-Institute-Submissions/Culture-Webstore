@@ -529,7 +529,7 @@ tr > th:last-of-type {
     transition: all .9s ease;
     width: 100%;
     overflow: hidden;
-    height: 400px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -776,6 +776,19 @@ tr > th:last-of-type {
 
 /*--------------------------------------------------------------------- Media Queries */
 
+@media (min-width: 1440px) {
+    #featured-products .zoomer .image-box img {
+        height: 400px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+    #featured-products .zoomer .image-box img {
+        height: 280px;
+    }
+}
+
+
 @media screen and (max-width: 1200px) {
     .l-space {
         letter-spacing: 1px;
@@ -787,6 +800,8 @@ tr > th:last-of-type {
     .container {
         max-width: 60%;
     }
+
+
 }
 
 @media screen and (max-width: 990px) {
@@ -803,6 +818,7 @@ tr > th:last-of-type {
     .header-container {
         padding-top: 108px;
     }
+
 }
 
 @media screen and (max-width: 768px) {
