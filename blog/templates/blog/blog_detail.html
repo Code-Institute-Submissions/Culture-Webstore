@@ -28,13 +28,13 @@
             <div class="mt-md-5 pt-5">
                 <img class="img-fluid px-0 py-3 text-center card-img-top rounded-0 blog-header mb-5" src="{% firstof post.image post.image_url %}" alt="{{ post.name }}">
                 <h1 class="text-white">{{ post.title }}</h1>
-                <p class="mt-3 text-accent text-muted">Published: {{ post.date_added|date:'d M Y' }}</p>
-                <h3 class="product-page-price pb-4 text-left text-white">{{ post.intro }}</h3>
-                <p class="mt-3 text-main text-white letter-space">{{ post.body|linebreaksbr }}</p>
+                <p class="mt-3 text-accent text-muted mb-5">Published: {{ post.date_added|date:'d M Y' }}</p>
+                <h3 class="product-page-price text-left text-khaki border-left pl-4">{{ post.intro }}</h3>
+                <p class="mt-5 text-main text-white letter-space">{{ post.body|linebreaksbr }}</p>
                 <p class="text-center text-uppercase letter-space-animate mt-5">
-                    <a href="{% url 'blog' %}" class="text-danger">
+                    <a href="{% url 'blog' %}" class="text-khaki">
                         <i class="lni lni-arrow-left"></i>
-                        Back To Blog
+                        All Posts
                     </a>
                 </p>    
             </div>

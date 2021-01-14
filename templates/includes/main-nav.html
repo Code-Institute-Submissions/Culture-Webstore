@@ -211,9 +211,9 @@
                 <li class="nav-item border-none border-sm-right">
                     <a class="nav-link" href="{% url 'view_bag' %}">
                         {% if grand_total %}
-                            <i class="lni lni-cart-full text-danger"></i>
+                            <i class="lni lni-cart-full text-khaki"></i>
                             <span class="d-inline d-md-none d-lg-inline">
-                            <em class="text-danger">€{{ grand_total|floatformat:2 }}</em>
+                            <em class="text-khaki">€{{ grand_total|floatformat:2 }}</em>
                             {% else %}
                             <i class="lni lni-cart"></i>
                             Cart
