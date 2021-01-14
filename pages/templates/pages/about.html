@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block subscribe %}
+    {% include 'subscribe/subscribe.html' %}
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<div id="hero" class="container-fluid text-center">
+    <div class="row mh-25">
+        <div class="col-12 mh-25">
+            <h1 class="display-1 h-100">WE ARE CULTURE</h1>
+        </div>
+    </div>
+</div>
+
+<!-- About -->
+<div id="about" class="container py-5 mt-5">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h3 class="text-accent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed fermentum nibh,
+                vel aliquet massa. Etiam in magna id risus lacinia luctus eget eu est.</h3>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
