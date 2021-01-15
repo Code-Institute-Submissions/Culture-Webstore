@@ -8,6 +8,7 @@ class Post(models.Model):
     intro = models.TextField()
     body = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
+    soundcloud_embed = models.TextField(max_length=1200, null=True, blank=True)
 
     class Meta:
         ordering = ['-date_added']
