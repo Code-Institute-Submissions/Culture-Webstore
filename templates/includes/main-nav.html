@@ -129,7 +129,7 @@
                             <span class="d-inline d-md-none d-lg-inline">Account</span>
                         </div>
                     </a>
-                    <div class="dropdown-menu border-0 rounded-0 w-100 text-right" aria-labelledby="user-options">
+                    <div class="dropdown-menu border-0 rounded-0 w-100 text-right text-sm-left text-xl-right" aria-labelledby="user-options">
                         {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
                         <a href="{% url 'add_product' %}" class="dropdown-item">Add Product</a>
