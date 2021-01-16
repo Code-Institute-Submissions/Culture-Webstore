@@ -31,7 +31,7 @@
                 <p class="mt-3 text-accent text-muted mb-5">Published by: {{ user.username}} | {{ post.date_added|date:'d M Y' }}</p>
                 <h3 class="product-page-price text-left text-khaki border-left pl-4">{{ post.intro }}</h3>
                 <p class="mt-5 text-main text-white letter-space">{{ post.body|linebreaksbr }}</p>
-                <p class="mt-5 text-main text-white letter-space">{{ post.soundcloud_embed|safe }}</p>
+                <p class="mt-5 text-main text-white letter-space">{{ post.soundcloud_embed|default_if_none:""|safe }}</p>
                 <p class="text-center text-uppercase letter-space-animate mt-5">
                     <a href="{% url 'blog' %}" class="text-khaki">
                         <i class="lni lni-arrow-left"></i>
