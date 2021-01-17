@@ -164,6 +164,7 @@ a.text-khaki:hover {
     height: 100%;
     margin: 0;
     text-align: center;
+    line-height: 50px;
     /* Starting position */
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
@@ -312,6 +313,25 @@ tr > th:last-of-type {
     font-size: 4rem;
     font-weight: 300;
     letter-spacing: .1em;
+}
+
+
+/* Underlined tabs */
+
+.underline .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+}
+
+.underline .nav-link:hover {
+    border: none;
+    border-bottom: 3px solid transparent;
+}
+
+.underline .nav-link.active {
+    background: none;
+    color: #555;
+    border-color: #000;
 }
 
 /*--------------------------------------------------------------------- Image / Adjustments */
@@ -840,6 +860,15 @@ tr > th:last-of-type {
         font-size: 7rem;
     }
 
+
+
+}
+
+@media (min-width: 1600px) {
+    #product-detail-container {
+        max-width: 80%;
+        margin: auto;
+    }
 }
 
 @media (min-width: 1200px) and (max-width: 1440px) {
@@ -862,7 +891,7 @@ tr > th:last-of-type {
 }
 
 /* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
     .container {
         max-width: 60%;
     }
