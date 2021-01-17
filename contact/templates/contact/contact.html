@@ -17,11 +17,15 @@
             <p class="text-white text-uppercase letter-space">We're here to help</p>
         </div>
     </div>
-    <div class="row mt-5">
-        <div class="col-10 offset-1 mb-5">
-            <div class="row my-5 pb-5">
-                <div class="col-12 col-xl-8 offset-xl-2 mb-5 px-3 px-sm-5 py-4 shadow">
-                    <h2 class="text-center mb-4">Get In Touch</h2>
+    <div class="container-fluid mt-4 mb-5 pb-5">
+        <div id="product-detail-container" class="row px-0">
+            <div class="col-12 col-md-6 col-xl-5 offset-xl-1 pl-sm-3 pl-xl-5">
+                <div class="image-container my-5 pl-md-4 pl-lg-5 pl-xl-5 h-100">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-5 pr-sm-0 pr-xl-5">
+                <div class="mb-5 mt-md-5 pr-sm-0 pr-md-1 pr-xl-4">
+                    <h2 class="text-left pt-0 pt-md-5 mb-4">Get In Touch</h2>
                     <form action="{% url 'contact' %}" method="POST">
                         {% csrf_token %}
                         {% if user.is_authenticated %}
@@ -36,30 +40,33 @@
                     </form>
                 </div>
             </div>
-            <div class="row my-5">
-                <div class="card border-0 rounded-0 col-12 col-lg-4 my-2">
-                    <div class="col-12 button-black-border p-5 text-center">
-                        <a href="https://goo.gl/maps/H4RaVt1tLWfa3sKW8" target="_blank" class="text-dark">
-                            <p><small class="text-muted letter-space text-uppercase">ADDRESS</small></p>
-                            <h3 class="hover-white">Unit 11 Grafton St.,<br>Dublin</h3>
-                        </a>
-                    </div>
+            
+        </div>
+    </div>
+    <div class="container px-0 mt-4 mb-5 pb-5">
+        <div class="row my-5">
+            <div class="card border-0 rounded-0 col-12 col-lg-4 my-2">
+                <div class="col-12 button-black-border p-5 text-center">
+                    <a href="https://goo.gl/maps/H4RaVt1tLWfa3sKW8" target="_blank" class="text-dark">
+                        <p><small class="text-muted letter-space text-uppercase">ADDRESS</small></p>
+                        <h3 class="hover-white">Unit 11 Grafton St.,<br>Dublin</h3>
+                    </a>
                 </div>
-                <div class="card border-0 rounded-0 col-12 col-lg-4 my-2">
-                    <div class="col-12 button-black-border p-5 text-center">
-                        <a href="tel:00353 01 123 4567" class="text-dark">
-                            <p><small class="text-muted letter-space text-uppercase">Contact Number</small></p>
-                            <h3 class="hover-white">INT:<br>+353 1 23 4567</h3>
-                        </a>
-                    </div>
+            </div>
+            <div class="card border-0 rounded-0 col-12 col-lg-4 my-2">
+                <div class="col-12 button-black-border p-5 text-center">
+                    <a href="tel:00353 01 123 4567" class="text-dark">
+                        <p><small class="text-muted letter-space text-uppercase">Contact Number</small></p>
+                        <h3 class="hover-white">INT:<br>+353 1 23 4567</h3>
+                    </a>
                 </div>
-                <div class="card border-0 rounded-0 col-12 col-lg-4 my-2">
-                    <div class="col-12 button-black-border p-5 text-center">
-                        <a href="#" class="text-dark">
-                            <p><small class="text-muted letter-space text-uppercase">FREQUENTLY ASKED QUESTIONS</small></p>
-                            <h3 class="text-uppercase hover-white">Check the<br>List</h3>
-                        </a>
-                    </div>
+            </div>
+            <div class="card border-0 rounded-0 col-12 col-lg-4 my-2">
+                <div class="col-12 button-black-border p-5 text-center">
+                    <a href="{% url 'faq' %}" class="text-dark">
+                        <p><small class="text-muted letter-space text-uppercase">FREQUENTLY ASKED QUESTIONS</small></p>
+                        <h3 class="text-uppercase hover-white">Check the<br>List</h3>
+                    </a>
                 </div>
             </div>
         </div>
