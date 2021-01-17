@@ -334,6 +334,47 @@ tr > th:last-of-type {
     border-color: #000;
 }
 
+/* Accordion */
+
+/* Horizontal line */
+.collapsible-link::before {
+    content: '';
+    width: 14px;
+    height: 2px;
+    background: #333;
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 1rem;
+    display: block;
+    transition: all 0.3s;
+}
+
+/* Vertical line */
+.collapsible-link::after {
+    content: '';
+    width: 2px;
+    height: 14px;
+    background: #333;
+    position: absolute;
+    top: calc(50% - 7px);
+    right: calc(1rem + 6px);
+    display: block;
+    transition: all 0.3s;
+}
+
+.collapsible-link[aria-expanded='true']::after {
+    transform: rotate(90deg) translateX(-1px);
+}
+
+.collapsible-link[aria-expanded='true']::before {
+    transform: rotate(180deg);
+}
+
+.about-rule {
+    margin-left: -200px;
+    border: 2px solid #929060;
+}
+
 /*--------------------------------------------------------------------- Image / Adjustments */
 
 #hero {
@@ -344,6 +385,20 @@ tr > th:last-of-type {
     border-left: 65px solid white;
     border-right: 65px solid white;
     background-image: url('/static/images/culture-hero-background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+}
+
+#about-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    border-left: 65px solid white;
+    border-right: 65px solid white;
+    background-image: url('/static/images/about-hero-background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: bottom;
@@ -452,6 +507,14 @@ tr > th:last-of-type {
     margin-top: 20px;
 }
 
+.image-container {
+    background-image: url('/static/images/contact.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: 20px;
+}
+
 /* Animated svg: https://www.youtube.com/watch?v=ZZ3cbKWORM8 */
 #path-1 {
     fill: transparent;
@@ -486,6 +549,27 @@ tr > th:last-of-type {
     background: black;
     width: 100%;
     height: 100%;
+}
+
+.spin {
+    position: absolute;
+    bottom: -70%;
+    right: -10%;
+    margin-top: 0;
+    margin-left: 0;
+    animation: rotate 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    width: 50%;
+    z-index: -1;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /*--------------------------------------------------------------------- Buttons */
@@ -904,6 +988,13 @@ tr > th:last-of-type {
         height: 600px;
         background-position: bottom;
     }
+    
+    #about-hero {
+        border-left: 25px solid white;
+        border-right: 25px solid white;
+        height: 600px;
+        background-position: bottom;
+    }
 }
 
 /* fixed top navbar only on medium and up */
@@ -931,6 +1022,10 @@ tr > th:last-of-type {
 
     #featured-products .zoomer .image-box img {
         height: 300px;
+    }
+
+    .image-container {
+        background-image: none;
     }
 }
 
