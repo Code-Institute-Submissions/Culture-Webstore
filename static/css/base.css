@@ -68,6 +68,10 @@ a.text-khaki:hover {
     color: #666546 !important;
 }
 
+.hover-white:hover {
+    color: white !important;
+}
+
 /*--------------------------------------------------------------------- Nav */
 
 .navbar {
