@@ -2,6 +2,8 @@
 {% load static %}
 
 {% block page_header %}
+{% include 'includes/loader.html' %}
+
 <div class="container header-container">
     <div class="row">
         <div class="col"></div>
@@ -63,5 +65,6 @@
 		$('.btt-link').click(function(e) {
 			window.scrollTo(0,0)
 		})
-	</script>
+    </script>
+    <script src="{% static 'js/loader.js' %}"></script>
 {% endblock %}
