@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %}| About Us{% endblock %}
+
 {% block page_header %}
 {% include 'includes/loader.html' %}
 <div class="container header-container">
@@ -17,25 +19,62 @@
 {% block content %}
 
 <!-- Hero -->
-<div id="hero" class="container-fluid text-center">
+<div id="about-hero" class="container-fluid text-center">
     <div class="row mh-25">
-        <div class="col-12 mh-25">
-            <h1 class="d-flex d-md-none hero-text h-100 text-uppercase">We Are Culture</h1>
-            <h1 class="d-none d-md-flex hero-text h-100 text-uppercase">We Are <span class="pl-3 pl-xl-4 typing-text" data-period="2000" data-rotate='[ " fashion", " music", " culture" ]'></span>
-            </h1>
-            <div class="col-12 mh-25">
-                <a href="{% url 'products' %}" class="btn button-white h-100">SHOP NOW</a>
-            </div>
+        <div class="col-12 mh-25 z-999">
+            <h1 class="d-flex text-white hero-text h-100 text-uppercase z-999">On A Mission</h1>
+            <h4 class="text-accent text-white d-none d-sm-block text-uppercase letter-space">Past | Present | Future</h4>
+            <img class="spin d-none d-sm-flex" src="{% static 'images/since-2020.svg' %}">
         </div>
     </div>
 </div>
 
 <!-- About -->
-<div id="about" class="container py-5 mt-5">
+<div class="container py-5 mt-5 z-999">
     <div class="row">
-        <div class="col-12 text-center">
+        <div class="col-12 text-center z-999">
             <h3 class="text-accent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed fermentum nibh,
                 vel aliquet massa. Etiam in magna id risus lacinia luctus eget eu est.</h3>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt-4 mb-5 pb-5">
+    <div id="product-detail-container" class="row px-0">
+        <div class="col-12 col-md-6 col-xl-5 offset-xl-1 pl-sm-3 pl-xl-5">
+            <div class="my-5 pl-md-4 pl-lg-5 pl-xl-4">
+                <img class="img-fluid rounded-0" src="{% static 'images/about-section.jpg' %}"
+                    alt="ali-pazani-fCe-52iIZIM-unsplash">
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-5 pr-sm-0 pr-xl-5">
+            <div class="mb-5 mt-md-5 pr-sm-0 pr-md-3 pr-xl-4">
+                <h2 class="text-accent">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed fermentum nibh,
+                    vel aliquet massa. Etiam in magna id risus lacinia luctus eget eu est.
+                </h2>   
+                <h2 class="text-accent">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed fermentum nibh,
+                </h2> 
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-5 offset-xl-1 pl-sm-3 pl-xl-5">
+            <div class="my-5 pl-md-4 pl-lg-5 pl-xl-4">
+                <h2 class="text-accent">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed fermentum nibh,
+                    vel aliquet massa. Etiam in magna id risus lacinia luctus eget eu est.
+                </h2>   
+                <h2 class="text-accent">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed fermentum nibh,
+                </h2> 
+                
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-5 pr-sm-0 pr-xl-5">
+            <div class="mb-5 mt-md-5 pr-sm-0 pr-md-3 pr-xl-4">
+                <img class="img-fluid rounded-0" src="{% static 'images/about-section-2.jpg' %}"
+                alt="ali-pazani-fCe-52iIZIM-unsplash">
+            </div>
         </div>
     </div>
 </div>
@@ -46,4 +85,18 @@
     {{ block.super }}
     <script src="{% static 'js/typing_text.js' %}"></script>
     <script src="{% static 'js/loader.js' %}"></script>
+
+    <!-- Rotate on scroll: https://codepen.io/chriscoyier/pen/mdVWgdN -->
+    <script type="text/javascript">
+        window.addEventListener(
+        "scroll",
+        () => {
+            document.body.style.setProperty(
+            "--scroll",
+            window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+            );
+        },
+        false
+        );
+    </script>
 {% endblock %}
