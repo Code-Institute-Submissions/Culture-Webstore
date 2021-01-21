@@ -72,6 +72,11 @@ a.text-khaki:hover {
     color: white !important;
 }
 
+.bg-white-black-gradient {
+    background: rgb(255,255,255);
+    background: linear-gradient(170deg, rgba(255,255,255,1) 40%, rgba(146,144,96,1) 40%);
+}
+
 /*--------------------------------------------------------------------- Nav */
 
 .navbar {
@@ -399,6 +404,20 @@ tr > th:last-of-type {
     border-left: 65px solid white;
     border-right: 65px solid white;
     background-image: url('/static/images/about-hero-background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+}
+
+#error-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    border-left: 65px solid white;
+    border-right: 65px solid white;
+    background-image: url('/static/images/club.gif');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: bottom;
@@ -982,14 +1001,7 @@ tr > th:last-of-type {
 }
 
 @media screen and (max-width: 990px) {
-    #hero {
-        border-left: 25px solid white;
-        border-right: 25px solid white;
-        height: 600px;
-        background-position: bottom;
-    }
-    
-    #about-hero {
+    #hero, #about-hero, #error-hero {
         border-left: 25px solid white;
         border-right: 25px solid white;
         height: 600px;

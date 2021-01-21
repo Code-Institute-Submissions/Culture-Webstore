@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_title %}| 404 Page Not Found{% endblock %}
+{% block extra_title %}| 500 Internal Server Error{% endblock %}
 
 {% block page_header %}
 {% include 'includes/loader.html' %}
@@ -17,9 +17,9 @@
 <div id="error-hero" class="container-fluid text-center">
     <div class="row mh-25">
         <div class="col-12 mh-25">
-            <h1 class="hero-text text-white font-weight-bold">404</h1>
-            <h2 class="hero-text text-white">Page Not Found</h2>
-            <h3 class="text-white text-accent pb-3">Sorry about that!</h3>
+            <h1 class="hero-text text-white font-weight-bold">500</h1>
+            <h2 class="hero-text text-white">Internal Server Error</h2>
+            <h3 class="text-white text-accent pb-3">Something went wrong. Please try again later.</h3>
             <div class="col-12 mh-25">
                 <a href="{% url 'products' %}" class="btn button-white text-uppercase">Back to shop</a>
             </div>
