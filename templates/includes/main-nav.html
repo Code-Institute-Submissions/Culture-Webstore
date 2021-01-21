@@ -1,3 +1,4 @@
+{% load static %}
 <!-- bumper -->
 <div id="bumpber" class="d-none d-sm-block bg-black pb-1 fixed-top text-white px-3 px-md-4 px-lg-5">
     <div class="text-center">
@@ -18,7 +19,7 @@
 <!-- nav -->
 <nav class="navbar navbar-expand-md navbar-light l-space fixed-top mt-0 mt-sm-4 py-1 py-sm-3">
     <div class="container-fluid px-0 px-lg-5">
-        <a class="navbar-brand d-md-none m-0" href="{% url 'home' %}"><img class="logo-mobile" src="/media/culture.svg"
+        <a class="navbar-brand d-md-none m-0" href="{% url 'home' %}"><img class="logo-mobile" src="{% static 'images/culture.svg' %}"
                 alt="Culture brand logo"></a>
         <button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#navbarToggle"
             aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -112,7 +113,7 @@
             </ul>
 
             <a class="navbar-brand pl-3 pl-lg-0 d-none d-md-block mx-auto blur" href="{% url 'home' %}"><img class="py-0 py-sm-2"
-                    src="/media/culture.svg" alt="Culture brand logo">
+                    src="{% static 'images/culture.svg' %}" alt="Culture brand logo">
             </a>
 
             <ul class="navbar-nav text-right pl-5">

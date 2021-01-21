@@ -70,7 +70,7 @@
             </div>
             {% if products|length == 0 %}
             <div class="text-center mt-5">
-                <img src="{{ MEDIA_URL }}travolta.gif" class="card-img-top col-8 col-sm-6 col-lg-4 col-xl-3 rounded-0 pl-5" alt="John Travolta Gif">
+                <img src="{% static 'images/travolta.gif' %}" class="card-img-top col-8 col-sm-6 col-lg-4 col-xl-3 rounded-0 pl-5" alt="John Travolta Gif">
                 <h2 class="display-4 mt-2 text-uppercase letter-space">Sorry</h2>
                 {% if search_term %}
                     <h5>
