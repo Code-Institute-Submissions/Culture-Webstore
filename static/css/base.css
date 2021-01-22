@@ -328,7 +328,6 @@ tr>th:last-of-type {
     letter-spacing: .1em;
 }
 
-
 /* Underlined tabs */
 
 .underline .nav-link {
@@ -1048,9 +1047,6 @@ tr>th:last-of-type {
     .hero-text {
         font-size: 7rem;
     }
-
-
-
 }
 
 @media (min-width: 1600px) {
@@ -1065,7 +1061,6 @@ tr>th:last-of-type {
         height: 280px;
     }
 }
-
 
 @media screen and (max-width: 1200px) {
     .l-space {
