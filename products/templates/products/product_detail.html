@@ -104,13 +104,12 @@
                 </form>
                 <p class="pt-0 text-muted small text-accent"><span class="font-weight-bold">SKU:</span>{{ product.sku }}</p>
                 <p class="pt-3">Free delivery for orders over €{{free_delivery_threshold}}</p>
-                    <a href="{% url 'products' %}" class="mt-5 d-block d-md-none col-12 col-sm-8 btn button-black-border mb-5">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Back To Products</span>
-                    </a>
-                </p>
+                <a href="{% url 'products' %}" class="mt-5 d-block d-md-none col-12 col-sm-8 btn button-black-border mb-5">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Back To Products</span>
+                </a>
             </div>
         </div>
         <!-- Information tabs -->
@@ -154,21 +153,24 @@
                     <p class="lead font-italic pt-2">
                         We privide free delivery for all orders over €60. Order before 3pm to receive next day delivery.
                     </p>
-                    <li class="lead list-unstyled letter-space pb-3"><span class="font-weight-bold">IRELAND: </span>1 - 2 days</li>
-                    <li class="lead list-unstyled letter-space pb-3"><span class="font-weight-bold">Northern Ireland & UK: </span>2 - 3 days</li>
-                    <li class="lead list-unstyled letter-space pb-3"><span class="font-weight-bold">Europe: </span>4 - 6 days</li>
-                    <li class="lead list-unstyled letter-space pb-3"><span class="font-weight-bold">USA: </span>14 days</li>
+                    <ul>
+                        <li class="lead list-unstyled letter-space pb-3"><span class="font-weight-bold">IRELAND: </span>1 - 2 days</li>
+                        <li class="lead list-unstyled letter-space pb-3"><span class="font-weight-bold">Northern Ireland & UK: </span>2 - 3 days</li>
+                        <li class="lead list-unstyled letter-space pb-3"><span class="font-weight-bold">Europe: </span>4 - 6 days</li>
+                        <li class="lead list-unstyled letter-space pb-3"><span class="font-weight-bold">USA: </span>14 days</li>
+                    </ul>
                 </div>
                 <div id="returns" role="tabpanel" aria-labelledby="returns-tab" class="tab-pane fade px-4 py-5">
                     <h4 class="pt-2 font-weight-bold letter-space">FREE RETURNS</h4>
                     <p class="lead font-italic pt-2">
                         You have 30 days from the date of your order to return your purchase from Culture free of charge. The items must be in the original packaging and condition.
                     </p>
-                    <li class="lead pt-2">— If you no longer have the original packaging, you can return your order in alternative packaging, once it is sealed correctly.
-                    </li>    
-                    <li class="lead pt-2">— If you wish to modify or cancel your return request, please contact us so that we can process it.</li>
-                    <li class="lead pt-2">— The return address must be clearly labelled on the packaging</li>
-                    <li class="lead pt-4 list-unstyled letter-space pb-3"><span class="font-weight-bold">RETURN ADDRESS: </span>Culture, UNit 11, Grafton Street, Dublin 2</li>
+                    <ul>
+                        <li class="lead pt-2">— If you no longer have the original packaging, you can return your order in alternative packaging, once it is sealed correctly.</li>    
+                        <li class="lead pt-2">— If you wish to modify or cancel your return request, please contact us so that we can process it.</li>
+                        <li class="lead pt-2">— The return address must be clearly labelled on the packaging</li>
+                        <li class="lead pt-4 list-unstyled letter-space pb-3"><span class="font-weight-bold">RETURN ADDRESS: </span>Culture, UNit 11, Grafton Street, Dublin 2</li>
+                    </ul>
                 </div>
             </div>
         </div>

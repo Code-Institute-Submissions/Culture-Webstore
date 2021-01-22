@@ -106,7 +106,7 @@
                         {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
                             <img src="{{ product.image.url }}" class="card-img-top rounded-0" alt="{{ product.name }}">
-                        
+                        </a>
                         {% else %}
                         <a href="{% url 'product_detail' product.id %}">
                         <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top rounded-0" alt="{{ product.name }}">

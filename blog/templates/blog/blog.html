@@ -30,13 +30,14 @@
                     <p class="text-white text-accent z-999 rotate-90 position-absolute pt-5 px-3 pb-2 bg-black bottom-0 float-right">{{ post.date_added|date:'d M Y' }}</p>
                     <a href="{% url 'blog_detail' post.slug%}">
                         <img src="{{ post.image_url }}" class="card-img-top rounded-0" alt="{{ post.title }}">
-                    <div class="add-to-cart text-center">
-                        <div class="atc col-12">
-                            <a href="{% url 'blog_detail' post.slug%}">
-                                <h3 class="letter-space pt-1 text-white text-center"><small>Read More</small></h3>
-                            </a>
+                        <div class="add-to-cart text-center">
+                            <div class="atc col-12">
+                                <a href="{% url 'blog_detail' post.slug%}">
+                                    <h3 class="letter-space pt-1 text-white text-center"><small>Read More</small></h3>
+                                </a>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="card-body px-0 px-sm-3">
                     <a href="{% url 'blog_detail' post.slug%}">
