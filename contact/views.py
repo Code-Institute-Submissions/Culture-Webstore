@@ -3,16 +3,17 @@ from .models import Contact
 from .forms import ContactForm
 from django.contrib import messages
 
+
 def contact(request):
     """
     A view to add contact form info, return toast message
     and return to same page
     """
 
-    full_name=request.POST.get('full_name')
-    email=request.POST.get('email')
-    message=request.POST.get('message')
-    user_id=request.user
+    full_name = request.POST.get('full_name')
+    email = request.POST.get('email')
+    message = request.POST.get('message')
+    user_id = request.user
 
     if request.method == 'POST':
         if request.user.is_authenticated:

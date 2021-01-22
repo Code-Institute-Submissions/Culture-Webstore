@@ -33,7 +33,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '9755ef94fd49.ngrok.io',
     '127.0.0.1',
-    ]
+]
 
 
 # Application definition
@@ -88,7 +88,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by allauth
+                'django.template.context_processors.request',  # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
