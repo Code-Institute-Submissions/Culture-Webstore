@@ -3,9 +3,10 @@
 *,
 *::before,
 *::after {
-    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
@@ -23,8 +24,14 @@ body {
 
 /* from Bulma */
 .icon {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     height: 1.2rem;
     width: 1.2rem;
@@ -73,8 +80,9 @@ a.text-khaki:hover {
 }
 
 .bg-white-black-gradient {
-    background: rgb(255,255,255);
-    background: linear-gradient(170deg, rgba(255,255,255,1) 40%, rgba(146,144,96,1) 40%);
+    background: rgb(255, 255, 255);
+    background: -o-linear-gradient(280deg, rgba(255, 255, 255, 1) 40%, rgba(146, 144, 96, 1) 40%);
+    background: linear-gradient(170deg, rgba(255, 255, 255, 1) 40%, rgba(146, 144, 96, 1) 40%);
 }
 
 /*--------------------------------------------------------------------- Nav */
@@ -92,12 +100,19 @@ a.text-khaki:hover {
 
 .navbar-nav {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: no-wrap;
     flex-wrap: no-wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .navbar-nav>li {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
 }
 
@@ -109,6 +124,7 @@ a.text-khaki:hover {
 .navbar-toggler:focus,
 .navbar-toggler:active {
     outline: none;
+    -webkit-box-shadow: none;
     box-shadow: none;
     border: none;
 }
@@ -136,6 +152,7 @@ a.text-khaki:hover {
 
 .form-control:focus {
     border-color: black;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 8px rgba(0, 0, 0, 0);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 8px rgba(0, 0, 0, 0);
     background-color: black;
     color: black;
@@ -171,25 +188,15 @@ a.text-khaki:hover {
     text-align: center;
     line-height: 50px;
     /* Starting position */
-    -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
     transform: translateX(100%);
     /* Apply animation to this element */
-    -moz-animation: scroll-left 20s linear infinite;
     -webkit-animation: scroll-left 20s linear infinite;
     animation: scroll-left 20s linear infinite;
 }
 
 /* Move it (define the animation) */
-@-moz-keyframes scroll-left {
-    0% {
-        -moz-transform: translateX(-10%);
-    }
-
-    100% {
-        -moz-transform: translateX(-50%);
-    }
-}
 
 @-webkit-keyframes scroll-left {
     0% {
@@ -203,7 +210,6 @@ a.text-khaki:hover {
 
 @keyframes scroll-left {
     0% {
-        -moz-transform: translateX(-10%);
         /* Browser bug fix */
         -webkit-transform: translateX(-10%);
         /* Browser bug fix */
@@ -211,7 +217,6 @@ a.text-khaki:hover {
     }
 
     100% {
-        -moz-transform: translateX(-50%);
         /* Browser bug fix */
         -webkit-transform: translateX(-50%);
         /* Browser bug fix */
@@ -224,7 +229,8 @@ a.text-khaki:hover {
     color: white;
 }
 
-.dropdown-item:hover, .dropdown-item:focus {
+.dropdown-item:hover,
+.dropdown-item:focus {
     color: white;
     text-decoration: none;
     background-color: black;
@@ -297,8 +303,8 @@ a.text-khaki:hover {
     letter-spacing: .3em;
 }
 
-tr > td:last-of-type,
-tr > th:last-of-type {
+tr>td:last-of-type,
+tr>th:last-of-type {
     text-align: right;
 }
 
@@ -310,8 +316,10 @@ tr > th:last-of-type {
     z-index: -9000;
 }
 
-.rotate-90 {  
-    transform:  translateX(-50%) translateY(40%) rotate(-90deg);
+.rotate-90 {
+    -webkit-transform: translateX(-50%) translateY(40%) rotate(-90deg);
+    -ms-transform: translateX(-50%) translateY(40%) rotate(-90deg);
+    transform: translateX(-50%) translateY(40%) rotate(-90deg);
 }
 
 .hero-text {
@@ -351,6 +359,8 @@ tr > th:last-of-type {
     top: calc(50% - 1px);
     right: 1rem;
     display: block;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -364,14 +374,20 @@ tr > th:last-of-type {
     top: calc(50% - 7px);
     right: calc(1rem + 6px);
     display: block;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
 .collapsible-link[aria-expanded='true']::after {
+    -webkit-transform: rotate(90deg) translateX(-1px);
+    -ms-transform: rotate(90deg) translateX(-1px);
     transform: rotate(90deg) translateX(-1px);
 }
 
 .collapsible-link[aria-expanded='true']::before {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
 
@@ -383,8 +399,14 @@ tr > th:last-of-type {
 /*--------------------------------------------------------------------- Image / Adjustments */
 
 #hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     height: 80vh;
     border-left: 65px solid white;
@@ -397,8 +419,14 @@ tr > th:last-of-type {
 }
 
 #about-hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     height: 80vh;
     border-left: 65px solid white;
@@ -411,8 +439,14 @@ tr > th:last-of-type {
 }
 
 #error-hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     height: 80vh;
     border-left: 65px solid white;
@@ -451,6 +485,8 @@ tr > th:last-of-type {
 
 #features a {
     color: white;
+    -webkit-transition-duration: .2s;
+    -o-transition-duration: .2s;
     transition-duration: .2s;
 }
 
@@ -468,7 +504,6 @@ tr > th:last-of-type {
     background-size: cover;
     background-repeat: no-repeat;
     -webkit-transition: all .9s;
-    -moz-transition: all .9s;
     -o-transition: all .9s;
     transition: all .9s;
 }
@@ -476,9 +511,7 @@ tr > th:last-of-type {
 .parent:hover .child,
 .parent:focus .child {
     -webkit-transform: scale(1.15);
-    -moz-transform: scale(1.15);
     -ms-transform: scale(1.15);
-    -o-transform: scale(1.15);
     transform: scale(1.15);
 }
 
@@ -542,21 +575,38 @@ tr > th:last-of-type {
     stroke-dasharray: 300;
     stroke-dashoffset: 0;
     cursor: pointer;
+    -webkit-animation: animate 8s linear forwards infinite;
     animation: animate 8s linear forwards infinite;
 }
 
 #path-1:hover {
-    
+
     stroke-width: 20px;
+}
+
+@-webkit-keyframes animate {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    40% {
+        stroke-dashoffset: 800;
+    }
+
+    100% {
+        stroke-dashoffset: 1600;
+    }
 }
 
 @keyframes animate {
     0% {
         stroke-dashoffset: 0;
     }
+
     40% {
         stroke-dashoffset: 800;
     }
+
     100% {
         stroke-dashoffset: 1600;
     }
@@ -576,17 +626,30 @@ tr > th:last-of-type {
     right: -10%;
     margin-top: 0;
     margin-left: 0;
+    -webkit-animation: rotate 1s linear infinite;
     animation: rotate 1s linear infinite;
+    -webkit-animation-play-state: paused;
     animation-play-state: paused;
+    -webkit-animation-delay: calc(var(--scroll) * -1s);
     animation-delay: calc(var(--scroll) * -1s);
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     width: 50%;
     z-index: -1;
 }
 
+@-webkit-keyframes rotate {
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
 @keyframes rotate {
     to {
+        -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
@@ -693,29 +756,24 @@ tr > th:last-of-type {
 
 #featured-products .zoomer .image-box img {
     -webkit-transition: all .9s ease;
-    -moz-transition: all .9s ease;
     -o-transition: all .9s ease;
-    -ms-transition: all .9s ease;
     transition: all .9s ease;
 }
 
 #featured-products .zoomer .image-box img {
     -webkit-transition: all .9s ease;
-    -moz-transition: all .9s ease;
     -o-transition: all .9s ease;
-    -ms-transition: all .9s ease;
     transition: all .9s ease;
     width: 100%;
     overflow: hidden;
     height: 300px;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 
 #featured-products .zoomer:hover img {
     -webkit-transform: scale(1.15);
-    -moz-transform: scale(1.15);
     -ms-transform: scale(1.15);
-    -o-transform: scale(1.15);
     transform: scale(1.15);
 }
 
@@ -733,12 +791,16 @@ tr > th:last-of-type {
     -o-transform: translate(0px, 70px);
     -ms-transform: translate(0px, 70px);
     -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -778,6 +840,7 @@ tr > th:last-of-type {
 .blog-header {
     height: 400px;
     width: 100vw;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 
@@ -800,10 +863,10 @@ tr > th:last-of-type {
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
+    border-right: 4px solid transparent;
     border-bottom: 10px solid black;
     position: absolute;
     top: -10px;
@@ -854,8 +917,10 @@ tr > th:last-of-type {
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    margin-top: 1.5rem;
+    /* mt-4 */
+    color: #6c757d;
+    /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -868,14 +933,30 @@ tr > th:last-of-type {
     display: none;
 }
 
+.allauth-form-inner-content input::-webkit-input-placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content input::-moz-placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content input:-ms-input-placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content input::-ms-input-placeholder {
+    color: #aab7c4;
+}
+
 .allauth-form-inner-content input::placeholder {
     color: #aab7c4;
 }
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	/* btn */
-	display: inline-block;
+    /* btn */
+    display: inline-block;
     color: #fff;
     text-align: center;
     vertical-align: middle;
@@ -887,11 +968,16 @@ tr > th:last-of-type {
     font-size: 1rem;
 
     /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    -o-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content a {
-	color: #000000; /* text-info */
+    color: #000000;
+    /* text-info */
 }
 
 /* Product Form */
@@ -1001,7 +1087,10 @@ tr > th:last-of-type {
 }
 
 @media screen and (max-width: 990px) {
-    #hero, #about-hero, #error-hero {
+
+    #hero,
+    #about-hero,
+    #error-hero {
         border-left: 25px solid white;
         border-right: 25px solid white;
         height: 600px;
@@ -1024,7 +1113,7 @@ tr > th:last-of-type {
         height: 600px;
         background-position: top;
     }
-    
+
     #search-modal .display-3 {
         font-size: 3em;
         -webkit-text-stroke: 1px black;
