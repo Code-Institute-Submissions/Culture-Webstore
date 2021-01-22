@@ -1,0 +1,66 @@
+[
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "category": 4,
+        "sku": "cult1001",
+        "name": "Through Top Blouse",
+        "description": "Here lies the description for the above listed product. Here lies the description for the above listed product.",
+        "has_sizes": true,
+        "featured": true,
+        "price": "20.00",
+        "rating": "5.00",
+        "image_url": "https://raw.githubusercontent.com/JustinMcC066/Culture-Webstore/main/media/product-image-001.png",
+        "image": "product-image-001_Fw27ww0.png"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "category": 5,
+        "sku": "cult1002",
+        "name": "Soft Slacks",
+        "description": "Here lies the description for the above listed product. Here lies the description for the above listed product.",
+        "has_sizes": true,
+        "featured": true,
+        "price": "19.95",
+        "rating": "4.00",
+        "image_url": null,
+        "image": "product-image-002_fuwKxBz.png"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "category": 4,
+        "sku": "cult1003",
+        "name": "Oversized Hoodie",
+        "description": "Here lies the description for the above listed product. Here lies the description for the above listed product.",
+        "has_sizes": true,
+        "featured": true,
+        "price": "35.00",
+        "rating": "4.50",
+        "image_url": null,
+        "image": "product-image-003_1w7h9iC.png"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "category": 4,
+        "sku": "cult1004",
+        "name": "Denim Jacket",
+        "description": "Here lies the description for the above listed product. Here lies the description for the above listed product.",
+        "has_sizes": true,
+        "featured": true,
+        "price": "44.95",
+        "rating": "4.50",
+        "image_url": null,
+        "image": "product-image-004_l1XlGwE.png"
+    }
+}
+]

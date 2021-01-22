@@ -1,0 +1,82 @@
+[
+{
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+        "name": "m_tees",
+        "friendly_name": "Tees"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+        "name": "w_tees",
+        "friendly_name": "Tees"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+        "name": "m_tops",
+        "friendly_name": "Tops"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+        "name": "w_tops",
+        "friendly_name": "Tops"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 5,
+    "fields": {
+        "name": "m_bottoms",
+        "friendly_name": "Bottoms"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 6,
+    "fields": {
+        "name": "w_bottoms",
+        "friendly_name": "Bottoms"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 7,
+    "fields": {
+        "name": "m_footwear",
+        "friendly_name": "Footwear"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 8,
+    "fields": {
+        "name": "w_footwear",
+        "friendly_name": "Footwear"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 9,
+    "fields": {
+        "name": "m_accessories",
+        "friendly_name": "Accessories"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 10,
+    "fields": {
+        "name": "w_accessories",
+        "friendly_name": "Accessories"
+    }
+}
+]
