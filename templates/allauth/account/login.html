@@ -18,7 +18,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
 <div class="socialaccount_ballot">
 
-  <ul class="socialaccount_providers">
+  <ul class="socialaccount_providers list-unstyled">
     {% include "socialaccount/snippets/provider_list.html" with process="login" %}
   </ul>
 
@@ -32,7 +32,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 <p>{% blocktrans %}If you have not created an account yet, then please
 <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 {% endif %}
-<a href="{% provider_login_url "facebook" method="js_sdk" %}" class="btn button-black">Login With Facebook</a>
+
 <form class="login" method="POST" action="{% url 'account_login' %}">
   {% csrf_token %}
   {{ form|crispy }}
