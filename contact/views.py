@@ -40,7 +40,9 @@ def contact(request):
             'New Contact Message from: '+ full_name,
             'Hey Admin,\n\nYou have a new message from ' 
             + full_name+'. '
-            'Visit the admin dashboard to view.\n\nMany Thanks,\n\nCuture Couture',
+            'Visit the admin dashboard to view.\n\n'
+            'DASHBOARD: https://culture-webstore.herokuapp.com/admin/\n\n'
+            'Many Thanks,\nCulture Couture',
             'culturewebstore@gmail.com',
             [EMAIL_HOST_USER],
             fail_silently=True
