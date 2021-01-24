@@ -138,6 +138,10 @@ a.text-khaki:hover {
     max-width: 250px;
 }
 
+.navbar-brand img {
+    max-width: 250px;
+}
+
 #search-modal {
     font-family: 'Work Sans', sans-serif;
 }
@@ -1175,5 +1179,9 @@ tr>th:last-of-type {
     .blog-header {
         height: 250px;
     }
+
+    .navbar-brand img {
+        max-width: 200px;
+    }    
 
 }
