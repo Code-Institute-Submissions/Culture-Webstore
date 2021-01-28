@@ -37,10 +37,34 @@
                             {% endif %}
                         {% endfor %}
                         <div class="my-3">
-                            <button class="btn button-black rounded-0 w-100 mb-2" type="submit">Add Product</button>
-                            <a class="btn button-black-border rounded-0 w-100" href="{% url 'products' %}">Cancel</a>
+                            <button class="btn button-black rounded-0 w-100 mb-2" type="submit">Update Product</button>
+                            <a class="btn mt-2 mb-3 w-100 button-delete-border" data-toggle="modal" data-target="#deleteProduct">Delete Product</a>
+                            <a class="btn button-black rounded-0 w-100" href="{% url 'products' %}">Cancel</a>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="deleteProduct" tabindex="-1" role="dialog" aria-labelledby="deleteProfile" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content p-4">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modal-body">
+                        <p class="font-weight-semi text-danger text-center">Deleting: {{ product.name }}</p>
+                        <h2 class="font-weight-semi text-center">Are you sure?</h2>
+                        <h5 class="text-center pb-3 text-muted">You will not be able to undo this action.
+                        </h5>
+                        <div class="d-flex col-12 justify-content-center">
+                            <a href="{% url 'delete_product' product.id %}"
+                                class="edit-delete-btn h5 font-weight-semi rounded-pill px-4 pt-2">
+                                <i class="far fa-trash-alt pr-2"></i>Yes, I'm sure
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

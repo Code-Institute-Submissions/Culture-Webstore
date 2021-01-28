@@ -399,6 +399,10 @@ tr>th:last-of-type {
     border: 2px solid #929060;
 }
 
+.cursor {
+    cursor: pointer;
+}
+
 /*--------------------------------------------------------------------- Image / Adjustments */
 
 #hero {
@@ -705,6 +709,22 @@ tr>th:last-of-type {
     background-color: black;
     color: white;
     border: 2px solid black;
+}
+
+.button-delete-border {
+    background-color: white;
+    color: #d9534f !important;
+    border: 2px solid #d9534f;
+    font-size: 1rem;
+    border-radius: 0;
+    padding: 15px 40px 15px 40px;
+    letter-spacing: 2px;
+}
+
+.button-delete-border:hover {
+    background-color: #d9534f;
+    color: white !important;
+    border: 2px solid #d9534f;
 }
 
 .quantity-black-border {
