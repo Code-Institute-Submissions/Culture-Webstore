@@ -6,8 +6,8 @@ Order Number: {{ order.order_number }}
 Order Date: {{ order.date }}
 
 Order Total: €{{ order.order_total }}
-Delivery: €{{ round(order.delivery_cost, 2) }}
-Grand Total: €{{ round(order.grand_total, 2) }}
+Delivery: €{{ order.delivery_cost }}
+Grand Total: €{{ order.grand_total }}
 
 Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
 
