@@ -1130,8 +1130,16 @@ tr>th:last-of-type {
         border-left: 15px solid white;
         border-right: 15px solid white;
         height: 600px;
-        background-position: top;
+        background-image: url('/static/images/culture-home-hero-tablet.jpg');
     }
+
+    #about-hero {
+        background-image: url('/static/images/culture-about-hero-tablet.jpg');
+    }
+    
+    #error-hero {
+        background-image: url('/static/images/culture-error-hero-tablet.jpg');
+    } 
 
     #search-modal .display-3 {
         font-size: 3em;
@@ -1158,6 +1166,18 @@ tr>th:last-of-type {
 @media (max-width: 576px) {
     .hero-text {
         font-size: 3rem;
+    }
+
+    #hero {
+        background-image: url('/static/images/culture-home-hero-mobile.jpg');
+    }
+    
+    #about-hero {
+        background-image: url('/static/images/culture-about-hero-mobile.jpg');
+    }
+
+    #error-hero {
+        background-image: url('/static/images/culture-error-hero-mobile.jpg');
     }
 }
 
