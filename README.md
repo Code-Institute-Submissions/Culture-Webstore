@@ -334,9 +334,9 @@ To place an order, use the following Strip test card details:
 
 * Defensive design - modal appears when asking to delete item to ensure the user intends to do so.
 
-* Pagination for the products page or lazy loadingof product cards.
+* Pagination for the products page or lazy loading of product cards.
 
-* I would like to add a page where users can post an image showing how they wore the item bringing a community elemnt to the site.
+* I would like to add a page where users can post an image showing how they wore the item bringing a community element to the site.
 
  - - - - 
 
@@ -463,7 +463,7 @@ Soundcloud | soundcloud_embed | max_length=1200, null=True, blank=True | TextFie
   * Framework used to form the layout of each page.
 
 * [Django](https://www.djangoproject.com/)
-  * For jinja templating and page construction.
+  * Web app framework.
 
 * [Django Allauth](https://django-allauth.readthedocs.io/)
   * For authentication, registration, account management as well as 3rd party (social) account authentication.
