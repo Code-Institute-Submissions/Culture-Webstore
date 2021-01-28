@@ -332,8 +332,6 @@ To place an order, use the following Strip test card details:
 
 * Product image gallery with multiple images for each product.
 
-* Defensive design - modal appears when asking to delete item to ensure the user intends to do so.
-
 * Pagination for the products page or lazy loading of product cards.
 
 * I would like to add a page where users can post an image showing how they wore the item bringing a community element to the site.
