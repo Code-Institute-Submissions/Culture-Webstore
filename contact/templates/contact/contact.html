@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
+<!-- Header Container -->
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -9,14 +10,19 @@
 </div>
 {% endblock %}
 
+<!-- Contact -->
 {% block content %}
 <div class="container-fluid mb-2 py-4">
+    
+    <!-- Category/page header -->
     <div class="row">
         <div id="category-header" class="col text-center py-5">
             <h1 class="pt-5 pb-1 letter-space text-white">Contact Us</h1>
             <p class="text-white text-uppercase letter-space">We're here to help</p>
         </div>
     </div>
+
+    <!-- Contact form -->
     <div class="container-fluid mt-4 mb-5 pb-5">
         <div id="product-detail-container" class="row px-0">
             <div class="col-12 col-md-6 col-xl-5 offset-xl-1 pl-sm-3 pl-xl-5">
@@ -43,6 +49,8 @@
             
         </div>
     </div>
+
+    <!-- Contact feature buttons -->
     <div class="container px-0 mt-4 mb-5 pb-5">
         <div class="row my-5">
             <div class="card border-0 rounded-0 col-12 col-lg-4 my-2">
@@ -74,6 +82,7 @@
 </div>
 {% endblock %}
 
+<!-- Info icon section -->
 {% block iconinfo %}
     {% include 'includes/icon-info.html' %}
 {% endblock %}

@@ -7,6 +7,7 @@
 
 {% block extra_title %}| Order Placed{% endblock %}
 
+<!-- Header Container -->
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -15,18 +16,19 @@
 </div>
 {% endblock %}
 
-{% block subscribe %}
-    {% include 'subscribe/subscribe.html' %}
-{% endblock %}
-
+<!-- Checkout confirmation -->
 {% block content %}
 <div class="container-fluid mb-2 py-4">
+    
+    <!-- Category/page header -->
     <div class="row">
         <div id="category-header" class="col text-center py-5">
             <h1 class="pt-4 pb-2 letter-space text-white">Thank You</h1>
             <p class="text-white">Your order information is below. A confirmation email will be sent to<br> <strong class="text-accent">{{ order.email }}</strong></p>
         </div>
     </div>
+    
+    <!-- Order information -->
     <div class="row mt-5">
         <div class="col-10 offset-1">
             <div class="col-12 col-xl-8 offset-xl-2">
@@ -206,4 +208,9 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+<!-- Subscription Section -->
+{% block subscribe %}
+    {% include 'subscribe/subscribe.html' %}
 {% endblock %}

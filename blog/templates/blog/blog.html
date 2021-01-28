@@ -3,6 +3,7 @@
 
 {% block extra_title %}| Spotlight{% endblock %}
 
+<!-- Header container and preloader -->
 {% block page_header %}
 {% include 'includes/loader.html' %}
 
@@ -15,13 +16,17 @@
 
 {% block content %}
 
-<!-- Products -->
+<!-- Blog -->
 <div class="container-fluid mt-4">
+    
+    <!-- Category/page header -->
     <div class="row">
         <div id="category-header" class="col text-center py-5">
             <h1 class="pt-5 pb-1 letter-space text-white">The Spotlight</h1>
         </div>
     </div>
+
+    <!-- Blog cards -->
     <div id="featured-products" class="col-10 offset-1 p-0">  
         <div class="card-deck py-4 row-cols-1 row-cols-sm-2 row-cols-lg-3">
             {% for post in posts %}
@@ -58,6 +63,7 @@
 </div>
 {% endblock %}
 
+<!-- Subscription section -->
 {% block subscribe %}
     {% include 'subscribe/subscribe.html' %}
 {% endblock %}

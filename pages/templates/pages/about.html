@@ -3,6 +3,7 @@
 
 {% block extra_title %}| About Us{% endblock %}
 
+<!-- Header container and preloader -->
 {% block page_header %}
 {% include 'includes/loader.html' %}
 <div class="container header-container">
@@ -12,6 +13,7 @@
 </div>
 {% endblock %}
 
+<!-- Subscribe section -->
 {% block subscribe %}
     {% include 'subscribe/subscribe.html' %}
 {% endblock %}
@@ -28,6 +30,7 @@
         </div>
     </div>
 </div>
+
 <div class="container-fluid bg-black bg-white-black-gradient">
     <!-- About -->
     <div class="container py-5 mt-5 z-999">
@@ -39,6 +42,7 @@
         </div>
     </div>
     
+    <!-- Background info section -->
     <div class="container-fluid mt-4 mb-5 pb-5">
         <div id="product-detail-container" class="row px-0">
             <div class="col-12 col-md-6 col-xl-5 offset-xl-1 pl-sm-3 pl-xl-5">
@@ -82,7 +86,6 @@
         </div>
     </div>
 </div>
-
 {% endblock %}
 
 {% block postloadjs %}

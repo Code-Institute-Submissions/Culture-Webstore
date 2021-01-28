@@ -3,7 +3,7 @@
 
 {% block extra_title %}| Shop{% endblock %}
 
-
+<!-- Header container -->
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -14,8 +14,9 @@
 
 {% block content %}
 
-<!-- Products -->
 <div class="container-fluid mt-4">
+    
+    <!-- Category/page header with category tags -->
     <div class="row">
         <div id="category-header" class="col text-center py-5">
             <h1 class="letter-space"><a class="{% if search_term or current_categories or current_sorting != 'None_None' %} text-white {% else %} text-khaki {% endif %} letter-space-animate" href="{% url 'products' %}">All Products</a></h1> 
@@ -40,10 +41,13 @@
             {% endfor %}
         </div>
     </div>
-
+    
+    <!-- Products -->
     <div class="row">
         <div id="featured-products" class="col-10 offset-1 py-4">
             <div class="row mt-1 mb-2">
+                
+                <!-- Search results and product count -->
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                     <p class="text-muted mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
@@ -52,6 +56,8 @@
                         {{ products|length }} results {% if search_term %} for <strong>"{{ search_term }}"</strong>{% endif %}
                     </p>
                 </div>
+
+                <!-- Sorting -->
                 <div class="col-12 col-md-6 order-md-first d-flex justify-content-center justify-content-md-start mb-4 pr-0 pr-sm-5">
                     <div class="sort-select-wrapper w-50">
                         <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}black{% else %}black{% endif %}">
@@ -68,6 +74,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Search results -->
             {% if products|length == 0 %}
             <div class="text-center mt-5">
                 <img src="{% static 'images/travolta.gif' %}" class="card-img-top col-8 col-sm-6 col-lg-4 col-xl-3 rounded-0 pl-5" alt="John Travolta Gif">
@@ -99,6 +107,8 @@
                 {% endif %}
             </div>
             {% endif %}
+
+            <!-- Product Cards -->
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
                 {% for product in products %}
                 <div class="col mb-4 zoomer">
@@ -138,17 +148,22 @@
         </div>
     </div>
 </div>
+
+<!-- Back to top button -->
 <div class="btt-button shadow-sm">
     <a class="btt-link d-flex h-100">
         <i class="lni lni-angle-double-up text-white mx-auto my-auto"></i>
     </a>	
 </div>
+
 {% endblock %}
 
+<!-- Icon info section -->
 {% block iconinfo %}
     {% include 'includes/icon-info.html' %}
 {% endblock %}
 
+<!-- Subscribe section -->
 {% block subscribe %}
     {% include 'subscribe/subscribe.html' %}
 {% endblock %}

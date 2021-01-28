@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+<!-- Header container and preloader -->
 {% block page_header %}
-{% include 'includes/loader.html' %}
 <div class="container header-container">
     <div class="row">
         <div class="col"></div>
@@ -10,6 +10,7 @@
 </div>
 {% endblock %}
 
+<!-- Subscribe section -->
 {% block subscribe %}
     {% include 'subscribe/subscribe.html' %}
 {% endblock %}
@@ -69,10 +70,12 @@
 
 {% endblock %}
 
+<!-- Featured items cards -->
 {% block featured %}
     {% include 'includes/featured.html' %}
 {% endblock %}
 
+<!-- Icon info section-->
 {% block iconinfo %}
     {% include 'includes/icon-info.html' %}
 {% endblock %}

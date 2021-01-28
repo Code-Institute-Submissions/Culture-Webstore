@@ -3,6 +3,8 @@ from .models import Post
 
 
 def all_blogs(request):
+    """ A view to render blog posts page """
+
     posts = Post.objects.all()
 
     context = {
@@ -13,6 +15,8 @@ def all_blogs(request):
 
 
 def blog_detail(request, slug):
+    """ A view to render blog detail page """
+
     post = Post.objects.get(slug=slug)
 
     context = {

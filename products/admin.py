@@ -5,6 +5,10 @@ from .models import Product, Category
 
 
 class ProductAdmin(admin.ModelAdmin):
+    """
+    List of fields shown on the admin dashboard
+    """ 
+    
     list_display = (
         'sku',
         'name',

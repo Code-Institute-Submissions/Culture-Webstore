@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
+<!-- Header container -->
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -17,13 +18,18 @@
 </div>
 {% endblock %}
 
+<!-- Checkout -->
 {% block content %}
 <div class="container-fluid mb-2 py-4">
+    
+    <!-- Category/page header -->
     <div class="row">
         <div id="category-header" class="col text-center py-5">
             <h1 class="pt-5 pb-4 letter-space"><a class="text-white" href="">Checkout</a></h1> 
         </div>
     </div>
+
+    <!-- Checkout Info -->
     <div class="row mt-5">
         <div class="col-10 offset-1">
             <div class="row mt-5">
@@ -139,6 +145,8 @@
         </div>
     </div>
 </div>
+
+<!-- Stripe loading overlay -->
 <div id="loading-overlay">
     <h1 class="text-light loading-spinner">
         <span class="icon">

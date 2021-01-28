@@ -3,6 +3,7 @@
 
 {% block extra_title %}| 403 Forbidden{% endblock %}
 
+<!-- Header container and preloader -->
 {% block page_header %}
 {% include 'includes/loader.html' %}
 <div class="container header-container">
@@ -12,6 +13,7 @@
 </div>
 {% endblock %}
 
+<!-- Error 403 -->
 {% block content %}
 
 <div id="error-hero" class="container-fluid text-center">
@@ -29,6 +31,7 @@
 
 {% endblock %}
 
+<!-- Remove Footer -->
 {% block footer %}
 {% endblock %}
 

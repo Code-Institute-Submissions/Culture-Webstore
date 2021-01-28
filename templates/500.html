@@ -3,6 +3,7 @@
 
 {% block extra_title %}| 500 Internal Server Error{% endblock %}
 
+<!-- Header container and preloader -->
 {% block page_header %}
 {% include 'includes/loader.html' %}
 <div class="container header-container">
@@ -12,6 +13,7 @@
 </div>
 {% endblock %}
 
+<!-- Error 500 -->
 {% block content %}
 
 <div id="error-hero" class="container-fluid text-center">
@@ -29,6 +31,7 @@
 
 {% endblock %}
 
+<!-- Remove Footer -->
 {% block footer %}
 {% endblock %}
 
