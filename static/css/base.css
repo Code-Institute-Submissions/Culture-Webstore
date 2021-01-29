@@ -1131,14 +1131,20 @@ tr>th:last-of-type {
         border-right: 15px solid white;
         height: 600px;
         background-image: url('/static/images/culture-home-hero-tablet.jpg');
+        background-size: 110%;
+        background-position: top;
     }
 
     #about-hero {
         background-image: url('/static/images/culture-about-hero-tablet.jpg');
+        background-size: 110%;
+        background-position: top;
     }
     
     #error-hero {
         background-image: url('/static/images/culture-error-hero-tablet.jpg');
+        background-size: 110%;
+        background-position: top;
     } 
 
     #search-modal .display-3 {
@@ -1170,14 +1176,20 @@ tr>th:last-of-type {
 
     #hero {
         background-image: url('/static/images/culture-home-hero-mobile.jpg');
+        background-size: 110%;
+        background-position: top;
     }
     
     #about-hero {
         background-image: url('/static/images/culture-about-hero-mobile.jpg');
+        background-size: 110%;
+        background-position: top;
     }
 
     #error-hero {
         background-image: url('/static/images/culture-error-hero-mobile.jpg');
+        background-size: 110%;
+        background-position: top;
     }
 }
 
