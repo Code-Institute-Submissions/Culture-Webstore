@@ -92,14 +92,13 @@
                         </div>
                         <h4 class="all-products scroll-left bg-black col-12 d-none d-md-flex text-right text-sm-center text-uppercase py-3 pr-0 m-0 letter-space">
                             <a href="{% url 'products' %}">
-                                <p class="letter-space"><span class="pr-3">All Products</span><span class="px-3">> > ></span>
-                                    <span class="pr-3">All Products</span><span class="px-3">> > ></span>
-                                    <span class="pr-3">All Products</span><span class="px-3">> > ></span>
-                                    <span class="pr-3">All Products</span><span class="px-3">> > ></span>
-                                    <span class="pr-3">All Products</span><span class="px-3">> > ></span>
-                                    <span class="pr-3">All Products</span><span class="px-3">> > ></span>
-                                    <span class="pr-3">All Products</span><span class="px-3">> > ></span>
-                                </p>
+                                <span class="pr-3 etter-space">All Products</span><span class="px-3">> > ></span>
+                                <span class="pr-3">All Products</span><span class="px-3">> > ></span>
+                                <span class="pr-3">All Products</span><span class="px-3">> > ></span>
+                                <span class="pr-3">All Products</span><span class="px-3">> > ></span>
+                                <span class="pr-3">All Products</span><span class="px-3">> > ></span>
+                                <span class="pr-3">All Products</span><span class="px-3">> > ></span>
+                                <span class="pr-3">All Products</span><span class="px-3">> > ></span>
                             </a>
                         </h4>
                     </div>
@@ -120,7 +119,8 @@
                 <li class="nav-item border-none border-sm-right">
                     <a class="nav-link" href="#" data-toggle="modal" data-target="#search-modal">
                         <i class="lni lni-search-alt"></i>
-                        <span class="d-inline d-md-none d-lg-inline">Search</span></a>
+                        <span class="d-inline d-md-none d-lg-inline">Search</span>
+                    </a>
                 </li>
                 <li class="nav-item border-none border-sm-right dropdown">
                     <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
@@ -146,14 +146,14 @@
                 <li class="nav-item border-none border-sm-right">
                     <a class="nav-link" href="{% url 'view_bag' %}">
                         {% if grand_total %}
-                            <i class="lni lni-cart-full text-khaki"></i>
-                            <span class="d-inline d-md-none d-lg-inline">
-                            <em class="text-khaki">€{{ grand_total|floatformat:2 }}</em>
-                            {% else %}
-                            <i class="lni lni-cart"></i>
-                            Cart
-                            {% endif %}
+                        <i class="lni lni-cart-full text-khaki"></i>
+                        <span class="d-inline d-md-none d-lg-inline">
+                        <em class="text-khaki">€{{ grand_total|floatformat:2 }}</em>
+                        {% else %}
+                        <i class="lni lni-cart"></i>
+                        Cart
                         </span>
+                        {% endif %}
                     </a>
                 </li>
                 <li class="col d-flex d-md-none p-0">
