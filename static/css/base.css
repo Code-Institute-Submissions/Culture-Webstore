@@ -1145,7 +1145,19 @@ tr>th:last-of-type {
         background-image: url('/static/images/culture-error-hero-tablet.jpg');
         background-size: 110%;
         background-position: top;
-    } 
+    }
+
+    #feature-1 {
+        background-image: url('/static/images/shop-collection-tablet.jpg');
+    }
+    
+    #feature-2 {
+        background-image: url('/static/images/shop-womens-tablet.jpg');
+    }
+    
+    #feature-3 {
+        background-image: url('/static/images/shop-mens-tablet.jpg');
+    }
 
     #search-modal .display-3 {
         font-size: 3em;
@@ -1205,6 +1217,18 @@ tr>th:last-of-type {
 
     #category-header {
         background-image: url('/static/images/film-strip-mobile.jpg');
+    }
+
+    #feature-1 {
+        background-image: url('/static/images/shop-collection-mobile.jpg');
+    }
+    
+    #feature-2 {
+        background-image: url('/static/images/shop-womens-mobile.jpg');
+    }
+    
+    #feature-3 {
+        background-image: url('/static/images/shop-mens-mobile.jpg');
     }
 }
 
