@@ -184,7 +184,7 @@ a.text-khaki:hover {
     position: relative;
 }
 
-.scroll-left p {
+.scroll-left a {
     position: absolute;
     width: 150%;
     height: 100%;
