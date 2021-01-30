@@ -350,7 +350,7 @@ tr>th:last-of-type {
     border-color: #000;
 }
 
-/* Accordion */
+/* Accordion: SRC: https://bootstrapious.com/p/bootstrap-4-accordion */
 
 /* Horizontal line */
 .collapsible-link::before {
@@ -392,6 +392,10 @@ tr>th:last-of-type {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
+}
+
+#faq-accordion .lead {
+    padding-right: 30px;
 }
 
 .about-rule {
@@ -941,9 +945,7 @@ tr>th:last-of-type {
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
-    /* mt-4 */
     color: #6c757d;
-    /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -1000,7 +1002,6 @@ tr>th:last-of-type {
 
 .allauth-form-inner-content a {
     color: #000000;
-    /* text-info */
 }
 
 /* Product Form */
@@ -1122,7 +1123,6 @@ tr>th:last-of-type {
     .header-container {
         padding-top: 108px;
     }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -1158,6 +1158,13 @@ tr>th:last-of-type {
         height: 300px;
     }
 
+    #faq-accordion .lead {
+        font-size: .75rem;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 767.9px) {
     .image-container {
         background-image: none;
     }
@@ -1235,5 +1242,4 @@ tr>th:last-of-type {
     .navbar-brand img {
         max-width: 200px;
     }    
-
 }
