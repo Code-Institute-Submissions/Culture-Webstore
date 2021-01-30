@@ -37,7 +37,7 @@
                                 <h6
                                     class="col-12 font-weight-bold text-right text-sm-center d-block d-md-none text-uppercase py-2 pr-0 m-0 letter-space text-black">
                                     <a href="{% url 'products' %}">
-                                        <p>All Products</p>
+                                        All Products
                                     </a>
                                 </h6>
                                 <div class="col-12 col-sm-6 col-lg-3 my-2 mt-md-5 text-right text-sm-center text-lg-left pr-0">
@@ -148,11 +148,11 @@
                         {% if grand_total %}
                         <i class="lni lni-cart-full text-khaki"></i>
                         <span class="d-inline d-md-none d-lg-inline">
-                        <em class="text-khaki">€{{ grand_total|floatformat:2 }}</em>
+                            <em class="text-khaki">€{{ grand_total|floatformat:2 }}</em>
+                        </span>
                         {% else %}
                         <i class="lni lni-cart"></i>
                         Cart
-                        </span>
                         {% endif %}
                     </a>
                 </li>
