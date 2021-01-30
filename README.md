@@ -2,7 +2,7 @@
 
 ### Code Institute: Full Stack Frameworks Milestone Project
 
-![Culture Logo](https://github.com/JustinMcC066/Culture-Webstore/blob/main/readme_images/culture-logo.png)
+![Culture Logo](https://github.com/JustinMcC066/Culture-Webstore/blob/main/readme_images/culture-home-layout.jpg)
 
 ## Culture Webstore - [Live Site](https://culture-webstore.herokuapp.com/)
 
