@@ -334,6 +334,8 @@ To place an order, use the following Strip test card details:
 
 * Pagination for the products page or lazy loading of product cards.
 
+* Frontend input form for adding blogs.
+
 * I would like to add a page where users can post an image showing how they wore the item bringing a community element to the site.
 
  - - - - 
