@@ -3,6 +3,11 @@
 
 {% block extra_title %}| {% if 'm_' in product.category.name %}Mens {% else %} Womens {% endif %} {{ product.name }}{% endblock %}
 
+{% block extra_meta %}
+    <meta name="keywords" content="Fashion, Music, Urban, Culture">
+    <meta name="description" content="{% if 'The' in product.name %}{% else %}Our {% endif %}{{ product.name }} will look great on you!">
+{% endblock %}
+
 <!-- Header container -->
 {% block page_header %}
 <div class="container header-container">

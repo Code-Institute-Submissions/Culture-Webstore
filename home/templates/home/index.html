@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
 
+
+{% block extra_meta %}
+    <meta name="keywords" content="Culture, Clothing, Fashion, Music">
+    <meta name="description" content="Latest trends in clothing for women, men & kids at Culture online. Find the look for you.">
+{% endblock %}
+
+{% block extra_title %}| All New Collection{% endblock %}
+
 <!-- Header container and preloader -->
 {% block page_header %}
 {% include 'includes/loader.html' %}
