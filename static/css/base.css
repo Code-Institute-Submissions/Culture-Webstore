@@ -1162,6 +1162,10 @@ tr>th:last-of-type {
         font-size: .75rem;
         padding-right: 30px;
     }
+    
+    #category-header {
+        background-image: url('/static/images/film-strip-tablet.jpg');
+    }
 }
 
 @media (max-width: 767.9px) {
@@ -1197,6 +1201,10 @@ tr>th:last-of-type {
         background-image: url('/static/images/culture-error-hero-mobile.jpg');
         background-size: 110%;
         background-position: top;
+    }
+
+    #category-header {
+        background-image: url('/static/images/film-strip-mobile.jpg');
     }
 }
 
