@@ -2,11 +2,11 @@
 
 ### Code Institute: Full Stack Frameworks Milestone Project
 
-![Culture Logo](https://github.com/JustinMcC066/Culture-Webstore/blob/main/readme_images/culture-home-layout.jpg)
-
 ## Culture Webstore - [Live Site](https://culture-webstore.herokuapp.com/)
 
-Culture is an online ecommerce site providing clothing and accessories tailored to urban lifestyles.
+![Culture Logo](https://github.com/JustinMcC066/Culture-Webstore/blob/main/readme_images/culture-home-layout.jpg)
+
+Culture is an online e-commerce site providing clothing and accessories tailored to urban lifestyles.
 
  - - - - 
 
@@ -24,7 +24,6 @@ Culture is an online ecommerce site providing clothing and accessories tailored 
 3. [Technologies Used](#Technologies-Used "Goto Technologies Used")
 
 4. [Information Architecture](#information-architecture)
-    - [Database Choice](#database-choice)
     - [Database Models](#database-models)
 
 5. [Testing](#Testing "Goto Testing")

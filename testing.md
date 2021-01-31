@@ -8,7 +8,7 @@
 4.  [User Story Testing](#User-Story-Testing "Goto User Story Testing")
 5.  [Manual Testing](#Manual-Testing "Goto User Manual Testing")
     * [Design](#Design "Goto Design")
-    * [Responsiveness](#Responsiveness "Goto Responsiveness")
+    * [Responsive](#Responsive "Goto Responsive")
     * [Functionality](#Functionality "Goto Functionality")
 
 ## Browsers
@@ -18,10 +18,8 @@ Browser compatibility was also tested using the Lambdatest App.
 ## Responsiveness
 The site's reponsiveness was continuously monitored during the development stage using Chromes *Dev Tools*.
 Media queries have been added to ensure all elements resize with any issues at the various Bootstrap breakpoints.
-Further testing was done using [Responsive Test Tool](http://responsivetesttool.com/) which allowed for testing on additional devices - no errors were recorded.
-Responsiveness was also tested using the Lambdatest App.
 
-![Responsiveness Testing](https://raw.githubusercontent.com/JustinMcC066/Culture-Webstore/main/readme_images/site-responsiveness.jpg)
+![Responsiveness Testing](https://raw.githubusercontent.com/JustinMcC066/Culture-Webstore/main/readme_images/culture-responsive-screens.jpg)
 ![Testing Feedback Table](https://raw.githubusercontent.com/JustinMcC066/Culture-Webstore/main/readme_images/site-testing.jpg)
 
 ## Code Validation
