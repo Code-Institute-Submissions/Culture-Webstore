@@ -19,7 +19,7 @@ Browser compatibility was also tested using the Lambdatest App.
 The site's reponsiveness was continuously monitored during the development stage using Chromes *Dev Tools*.
 Media queries have been added to ensure all elements resize with any issues at the various Bootstrap breakpoints.
 
-![Responsiveness Testing](https://raw.githubusercontent.com/JustinMcC066/Culture-Webstore/main/readme_images/culture-responsive-screens.jpg)
+![Responsiveness Testing](https://raw.githubusercontent.com/JustinMcC066/Culture-Webstore/main/readme_images/culture-responsive-screens-update.jpg)
 ![Testing Feedback Table](https://raw.githubusercontent.com/JustinMcC066/Culture-Webstore/main/readme_images/site-testing.jpg)
 
 ## Code Validation
