@@ -25,7 +25,8 @@ Media queries have been added to ensure all elements resize with any issues at t
 ## Code Validation
 All html pages were checked using [W3C Markup Validation](https://validator.w3.org/) and passed with no errors.
 
-The CSS file was checked using [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) and passed with no errors.
+The CSS file was checked using [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) and passed with one error (Parse Error). When corrected, the animation fails to work.
+I have decded to leave this intact as this is a known error in the w3 CSS validator. [Parse Errors with calc values](https://stackoverflow.com/questions/18035088/parse-errors-when-using-calc-with-rem-and-px)
 
 All JavaScript files were checked using [JS Hint](https://jshint.com/) No errors were reported.
 
